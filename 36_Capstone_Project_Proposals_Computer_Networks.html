@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>36 Capstone Project Proposals: Computer Networks</title>
+<style>
+:root{--ink:#1d2433;--mute:#5b6476;--line:#dfe3ea;--bg:#f6f7f9;--acc:#7a2e5f}
+*{box-sizing:border-box} body{margin:0;font:15px/1.55 "Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:28px;margin:0 0 2px} .sub{color:var(--mute);margin:0 0 20px}
+section.box{background:#fff;border:1px solid var(--line);border-left:6px solid var(--acc);border-radius:10px;padding:14px 22px;margin:0 0 16px}
+section.box h2{font-size:19px;margin:4px 0 8px} section.box h4{margin:10px 0 4px}
+section.box ul,section.box ol{margin:0 0 0 20px;padding:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+table{border-collapse:collapse;width:100%;font-size:14px} th,td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+th{background:#f3eef2}
+.src{font-size:12.5px;color:var(--mute)}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--line);margin:8px 0 16px}
+.bar input,.bar select,.bar button{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:#fff}
+.bar input{flex:1;min-width:200px} .bar button{cursor:pointer} #count{color:var(--mute);font-size:14px}
+.card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--acc);border-radius:10px;padding:14px 20px;margin-bottom:14px}
+.card header{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.pid{font-weight:700;font-family:ui-monospace,Consolas,monospace;background:var(--acc);color:#fff;padding:1px 8px;border-radius:6px}
+.wk{font-size:11.5px;border:1px solid var(--line);border-radius:20px;padding:0 7px;color:var(--mute)}
+.lang{margin-left:auto;font-size:12.5px;color:var(--mute)}
+.card h3{margin:8px 0 0;font-size:18px} .ro{margin:0 0 8px;font-style:italic;color:var(--acc)}
+.card p{margin:4px 0} .meta{font-size:13px;color:var(--mute)}
+details{margin:8px 0} summary{cursor:pointer;font-weight:600}
+details ul{margin:4px 0 0 20px;padding:0;font-size:14px} ul.plain{list-style:none;margin-left:4px}
+.plan td:first-child,.plan td:nth-child(2){white-space:nowrap} .note{font-size:12.5px;color:var(--mute);margin:4px 0}
+.hidden{display:none}
+@media(max-width:800px){.grid2{grid-template-columns:1fr}}
+@media print{.bar{display:none} body{background:#fff} .card{break-inside:avoid-page}}
+</style></head><body><div class="wrap">
+<h1>36 Capstone Project Proposals: Computer Networks <br> Assoc. Prof. PhD. Nicolaie Popescu-Bodorin, 2022-2026</h1>
+<p class="sub">Propuneri de teme pentru proiectul de diplomă / lucrarea de licență · Based on Weeks 1–7 of the Computer Networks course · Projects CP01–CP36</p>
+
+<section class="box"><h2>1. What a capstone project is in Romanian universities</h2>
+<p>Romanian universities don't use the term "capstone project". The equivalent is the final-year graduation project that ends the bachelor's (licență) cycle. Engineering programmes (such as Computers and Information Technology, 240 ECTS) call it the <b>proiect de diplomă</b> and end with an <b>examen de diplomă</b>. Other programmes call it the <b>lucrare de licență</b>, with an <b>examen de licență</b>.</p>
+<ul>
+<li><b>Legal framework.</b> Higher Education Law no. 199/2023 and the graduation framework methodology OME 3.691/2024, amended by OME 7.843/2024. From 2025–2026 onwards, the graduation exam has two compulsory parts: (a) an assessment of fundamental and specialty knowledge and (b) the public presentation and defence of the graduation project. Each university and faculty sets its own detailed rules.</li>
+<li><b>Nature of the work.</b> The project is individual and original. It applies knowledge from several courses to a real engineering problem and is completed during the final year under a scientific supervisor (<i>conducător științific</i>). The topic and its basic requirements are recorded in a topic sheet (<i>fișa temei</i>). Topics are published on the faculty website, and the student chooses one at the start of the final year.</li>
+<li><b>Typical requirements (example: Faculty of Automation and Computers, Politehnica University of Timișoara).</b> About 40–50 pages, written in Romanian or in the language of the programme. A signed declaration of originality. A similarity check with a maximum of 35% similarity. A practical demonstration of the system is compulsory, and if it works only partly, the grade is reduced in proportion. The supervisor writes an evaluation and validates the project before the defence. The presentation lasts about 7 minutes, followed by questions.</li>
+<li><b>Grading (same example).</b> Each committee member gives a whole grade from 1 to 10 for each part. Each part needs at least 5.00, and the average of the two parts needs at least 6.00. There are sessions in June/July, September and February.</li>
+<li><b>Implication for this catalogue.</b> Each proposal below is written as a diploma-project topic. It builds on Computer Networks (Weeks 1–7) and draws on programming, operating systems and security knowledge. It is sized for a full final year of individual work<!-- and should be checked against your own faculty's graduation regulation-->.</li>
+</ul>
+<!--<p class="src">Sources: UPT Faculty of Automation and Computers, graduation-exam rules (2024); Edupedu report on OME 7.843/2024 (Monitorul Oficial, 31 Dec 2024); UNSTPB and UTCN faculty guides for the diploma project. Page counts, similarity limits and presentation times vary between faculties.</p>-->
+</section>
+
+<section class="box"><h2>2. Common calendar (final year)</h2>
+<table><tr><th>Stage</th><th>Period</th><th>Activities</th><th>Checkpoint with the supervisor</th></tr>
+<tr><td>Stage 1</td><td>Oct–Nov</td><td>Choose the topic, sign the topic sheet, review the literature and standards</td><td>Approved topic sheet and annotated bibliography</td></tr>
+<tr><td>Stage 2</td><td>Dec–Jan</td><td>Requirements, specification, architecture</td><td>Specification document and first draft of chapters 1–3</td></tr>
+<tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement the core system</td><td>Working prototype demonstrated; draft of chapters 4–5</td></tr>
+<tr><td>Stage 4</td><td>Apr–May</td><td>Complete, test and evaluate the system</td><td>Results available; draft of chapters 6–7</td></tr>
+<tr><td>Stage 5</td><td>May–Jun</td><td>Final thesis, similarity check, upload, slides, rehearsal</td><td>Supervisor's evaluation and validation; public defence</td></tr></table>
+</section>
+
+<section class="box"><h2>3. Standard deliverables for every proposal</h2>
+<div class="grid2">
+<div><h4>Deliverable 1: Application (software)</h4><ul><li>Complete source code in a Git repository with a meaningful commit history covering all stages</li><li>Automated build (Maven/Gradle/Makefile) and automated tests</li><li>Scripts that rebuild the test setup and reproduce every experiment in the thesis</li><li>Executables, configuration examples, datasets and capture files (.pcapng) used as evidence</li><li>README with an architecture overview, installation and quick-start guide</li><li>A working live demo for the defence (a recorded video is a backup only if the faculty accepts it)</li></ul></div>
+<div><h4>Deliverable 2: Thesis as a Word document (≈40–60 pages, or the faculty's limit)</h4><ol><li>Cover and title page in the faculty&#x27;s format</li><li>Topic sheet (fișa temei) signed by the student and supervisor</li><li>Abstract in Romanian and English (≈1 page) and keywords</li><li>Table of contents, list of figures and tables</li><li>Introduction: context, motivation, objectives, structure of the thesis</li><li>State of the art and theoretical background: standards (RFCs), existing solutions</li><li>Requirements and specification: functional and non-functional, assumptions</li><li>System design: architecture, protocols, data structures, diagrams</li><li>Implementation: technologies, main modules, key algorithms and decisions</li><li>Testing and experimental evaluation: testbed, methodology, results, discussion</li><li>User and deployment manual</li><li>Conclusions, personal contributions (stated explicitly) and future work</li><li>Bibliography (consistent citation style, e.g. IEEE) and annexes (selected source code, configurations)</li><li>Signed declaration of originality (Declarație de autenticitate / originalitate)</li></ol></div>
+</div>
+<h4>Evaluation (example)</h4>
+<table><tr><th>Criterion</th><th>Weight</th></tr>
+<tr><td>Technical complexity and correctness of the application (verified in the live demo)</td><td>30%</td></tr>
+<tr><td>Quality of design and protocol/algorithm specification</td><td>15%</td></tr>
+<tr><td>Experimental evaluation and comparison with standard solutions</td><td>20%</td></tr>
+<tr><td>Clearly identified personal contributions and originality</td><td>10%</td></tr>
+<tr><td>Scientific quality and editing of the thesis</td><td>15%</td></tr>
+<tr><td>Consistent work across all stages</td><td>10%</td></tr></table>
+<!--<p class="note">The committee's grade for the defence follows the faculty's own rules. This grid is a suggestion for the supervisor's evaluation.</p>-->
+</section>
+
+<div class="bar">
+ <input id="q" type="search" placeholder="Search titles, topics, RFCs…">
+ <select id="week"><option value="">All course weeks</option><option value="w1">W1 Networks, edge &amp; core, delay</option><option value="w2">W2 Layering, queueing, packet analysis</option><option value="w3">W3 Web, HTTP, sockets in C</option><option value="w4">W4 Cookies, caching, HTTPS, SSH, FTP</option><option value="w5">W5 Email, DNS, NAT</option><option value="w6">W6 Transport layer, TCP/UDP</option><option value="w7">W7 Socket programming in Java</option></select>
+ <button id="tog">Collapse details</button><button onclick="window.print()">Print / PDF</button>
+ <span id="count"></span>
+</div>
+<div id="cards">
+<article class="card" data-weeks="w6">
+ <header><span class="pid">CP01</span><span class="wk">W6</span><span class="lang">C or Java</span></header>
+ <h3>Reliable Transport over UDP with Sliding Window and Congestion Control</h3>
+ <p class="ro">Protocol de transport fiabil peste UDP cu fereastră glisantă și control al congestiei</p>
+ <p><b>Abstract.</b> A full user-space transport protocol over UDP with connection setup, Selective Repeat, adaptive RTO (RFC 6298), fast retransmit and Reno-style congestion control, evaluated under netem.</p>
+ <p><b>Motivation and problem.</b> Modern transports (QUIC, game and media protocols) re-implement reliability and congestion control in user space over UDP; building one end-to-end consolidates all transport-layer mechanisms.</p>
+ <p class="meta"><b>Course foundation:</b> W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Write a protocol specification (header, handshake, teardown, FSM)</li><li><b>O2.</b> Implement connection management with 3-way handshake and FIN</li><li><b>O3.</b> Implement SR window, cumulative + selective ACKs</li><li><b>O4.</b> Implement RTO estimation, fast retransmit and cwnd/ssthresh</li><li><b>O5.</b> Evaluate throughput vs. delay/loss and compare with TCP via iperf3</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Original protocol specification written in RFC style</li><li>Own implementation of SR, RTO estimation and Reno congestion control</li><li>Reproducible netem-based evaluation comparing with Linux TCP</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; write a protocol specification (header, handshake, teardown, FSM)</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement connection management with 3-way handshake and FIN</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement SR window, cumulative + selective ACKs; implement RTO estimation, fast retransmit and cwnd/ssthresh</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Evaluate throughput vs. delay/loss and compare with TCP via iperf3</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Library + file transfer demo</li><li>Live cwnd/RTT trace export</li><li>Configurable algorithms (fixed window / Reno)</li><li>Fairness test with two flows</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Full protocol RFC-style specification</li><li>Experimental evaluation with graphs and statistical repetition</li><li>Comparison with TCP and discussion of differences</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Goodput vs. delay and loss</li><li>Retransmission ratio</li><li>Jain fairness index for two competing flows</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 9293 (TCP)</li><li>RFC 6298 (RTO)</li><li>RFC 5681 (congestion control)</li><li>Kurose &amp; Ross, ch. 3</li></ul></details>
+</article>
+<article class="card" data-weeks="w5">
+ <header><span class="pid">CP02</span><span class="wk">W5</span><span class="lang">C or Java</span></header>
+ <h3>Recursive DNS Resolver from Scratch</h3>
+ <p class="ro">Resolver DNS recursiv implementat de la zero</p>
+ <p><b>Abstract.</b> A recursive resolver that starts from root hints, follows referrals, handles CNAME chains and glue records, caches with TTL and serves clients over UDP/TCP.</p>
+ <p><b>Motivation and problem.</b> Every Internet transaction starts with name resolution; a recursive resolver exercises message encoding, iterative referrals, caching and security trade-offs.</p>
+ <p class="meta"><b>Course foundation:</b> W5 Email, DNS, NAT</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement DNS message encoding/decoding with compression</li><li><b>O2.</b> Implement iterative resolution from root servers</li><li><b>O3.</b> Handle glue, out-of-bailiwick NS lookups and CNAME chains</li><li><b>O4.</b> Implement TTL cache including negative caching</li><li><b>O5.</b> Serve clients and compare performance with a public resolver</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Wire-format DNS encoder/decoder with compression</li><li>Iterative resolution engine with glue and CNAME handling</li><li>Comparative measurements against a public resolver</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement DNS message encoding/decoding with compression</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement iterative resolution from root servers</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Handle glue, out-of-bailiwick NS lookups and CNAME chains; implement TTL cache including negative caching</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Serve clients and compare performance with a public resolver</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Resolver daemon</li><li>Trace mode showing each referral (like dig +trace)</li><li>Cache inspector</li><li>Benchmark tool</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Resolution algorithm with diagrams</li><li>Performance and cache-hit measurements</li><li>Security: cache poisoning, source port randomization, DNSSEC overview</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Resolution latency (cold/warm cache)</li><li>Cache hit ratio</li><li>Correctness on a test set of 500 names</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 1034/1035</li><li>RFC 2308 (negative caching)</li><li>RFC 5452 (anti-spoofing)</li><li>Kurose &amp; Ross, ch. 2</li></ul></details>
+</article>
+<article class="card" data-weeks="w3 w4 w7">
+ <header><span class="pid">CP03</span><span class="wk">W3</span><span class="wk">W4</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>HTTP/1.1 Web Server with TLS, Virtual Hosts and Thread Pool</h3>
+ <p class="ro">Server web HTTP/1.1 cu TLS, gazde virtuale și pool de fire de execuție</p>
+ <p><b>Abstract.</b> A production-style web server with TLS (SNI-based virtual hosts), keep-alive, chunked encoding, conditional GET, range requests, compression and a configurable thread pool.</p>
+ <p><b>Motivation and problem.</b> Web servers are the most deployed network applications; a standards-compliant implementation demonstrates mastery of HTTP semantics, concurrency and TLS.</p>
+ <p class="meta"><b>Course foundation:</b> W3 Web, HTTP, sockets in C; W4 Cookies, caching, HTTPS, SSH, FTP; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design modular architecture (listener, parser, router, handlers)</li><li><b>O2.</b> Implement HTTP/1.1 compliance features incl. Range and If-None-Match</li><li><b>O3.</b> Add TLS with keystore and SNI virtual hosts</li><li><b>O4.</b> Add gzip compression and caching headers</li><li><b>O5.</b> Benchmark against Nginx under load</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Modular server architecture designed by the student</li><li>HTTP/1.1 feature set with compliance matrix</li><li>Benchmark study against Nginx</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design modular architecture (listener, parser, router, handlers)</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement HTTP/1.1 compliance features incl. Range and If-None-Match</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Add TLS with keystore and SNI virtual hosts; add gzip compression and caching headers</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Benchmark against Nginx under load</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Config file (hosts, roots, certificates)</li><li>Thread pool and connection limits</li><li>Access and error logs</li><li>Admin status page</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Architecture and design patterns</li><li>RFC 9110/9112 compliance matrix</li><li>Benchmark and profiling results</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Requests/s and p99 latency under load</li><li>RFC compliance coverage (%)</li><li>Memory and thread usage</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 9110, RFC 9112</li><li>RFC 8446 (TLS 1.3)</li><li>RFC 6066 (SNI)</li></ul></details>
+</article>
+<article class="card" data-weeks="w5">
+ <header><span class="pid">CP04</span><span class="wk">W5</span><span class="lang">Java</span></header>
+ <h3>Mail System: SMTP + IMAP Server with Web Client</h3>
+ <p class="ro">Sistem de poștă electronică: server SMTP și IMAP cu client web</p>
+ <p><b>Abstract.</b> A complete small mail system: SMTP receiving server with STARTTLS and AUTH, IMAP4 server subset (LOGIN, LIST, SELECT, FETCH, STORE, SEARCH, EXPUNGE) and a webmail front-end.</p>
+ <p><b>Motivation and problem.</b> Email remains a core service whose architecture (MUA/MTA/MDA, push vs. pull) illustrates the layering of application protocols.</p>
+ <p class="meta"><b>Course foundation:</b> W5 Email, DNS, NAT</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design storage (Maildir) and user database</li><li><b>O2.</b> Implement SMTP server with STARTTLS/AUTH</li><li><b>O3.</b> Implement IMAP subset with UID support</li><li><b>O4.</b> Implement webmail over HTTP using IMAP/SMTP as backend</li><li><b>O5.</b> Interoperability tests with Thunderbird</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Integrated SMTP + IMAP subset + webmail system</li><li>Maildir-based storage design</li><li>Interoperability campaign with Thunderbird</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design storage (Maildir) and user database</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement SMTP server with STARTTLS/AUTH</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement IMAP subset with UID support; implement webmail over HTTP using IMAP/SMTP as backend</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Interoperability tests with Thunderbird</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Three integrated services</li><li>Thunderbird compatibility</li><li>Attachments via MIME</li><li>Admin user management</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>System architecture diagram</li><li>Protocol compliance tables</li><li>Security analysis (TLS, open relay, auth)</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Protocol compliance tests passed</li><li>Throughput (messages/s)</li><li>Interoperability matrix with real clients</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 5321, RFC 5322</li><li>RFC 9051 (IMAP4rev2)</li><li>RFC 2045–2049 (MIME)</li><li>RFC 3207 (STARTTLS)</li></ul></details>
+</article>
+<article class="card" data-weeks="w4">
+ <header><span class="pid">CP05</span><span class="wk">W4</span><span class="lang">Java</span></header>
+ <h3>SSH-like Secure Shell and Port Forwarding</h3>
+ <p class="ro">Shell securizat de tip SSH cu redirecționare de porturi</p>
+ <p><b>Abstract.</b> A simplified secure remote shell: Diffie-Hellman key exchange, host key verification, AES-GCM encrypted channel, public-key user auth, multiplexed channels for shell and port forwarding.</p>
+ <p><b>Motivation and problem.</b> SSH replaced TELNET by adding confidentiality, integrity and authentication; reproducing its design shows how secure channels are built over TCP.</p>
+ <p class="meta"><b>Course foundation:</b> W4 Cookies, caching, HTTPS, SSH, FTP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design handshake and record format inspired by SSH transport layer</li><li><b>O2.</b> Implement ECDH key exchange and key derivation</li><li><b>O3.</b> Implement host key fingerprints (TOFU) and user public-key auth</li><li><b>O4.</b> Implement channel multiplexing (shell, exec, local forward)</li><li><b>O5.</b> Security testing and Wireshark validation</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Key-exchange and encrypted record layer designed and implemented</li><li>Channel multiplexing for shell and port forwarding</li><li>Security analysis and threat model</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design handshake and record format inspired by SSH transport layer</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement ECDH key exchange and key derivation</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement host key fingerprints (TOFU) and user public-key auth; implement channel multiplexing (shell, exec, local forward)</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Security testing and Wireshark validation</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Client and server</li><li>known_hosts handling</li><li>Interactive shell</li><li>Local port forwarding</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Cryptographic design and threat model</li><li>Comparison with SSH (RFC 4251–4254)</li><li>Known weaknesses of the implementation</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Handshake latency</li><li>Throughput through tunnels</li><li>Results of a security checklist (replay, MITM, downgrade)</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 4251–4254</li><li>RFC 7748 (X25519)</li><li>NIST SP 800-38D (GCM)</li></ul></details>
+</article>
+<article class="card" data-weeks="w4 w5">
+ <header><span class="pid">CP06</span><span class="wk">W4</span><span class="wk">W5</span><span class="lang">Java</span></header>
+ <h3>Content Delivery Network Simulator</h3>
+ <p class="ro">Simulator de rețea de livrare a conținutului (CDN)</p>
+ <p><b>Abstract.</b> A mini-CDN with an origin server, several edge caching proxies and a DNS server that returns the nearest edge based on client network, with netem-emulated distances.</p>
+ <p><b>Motivation and problem.</b> CDNs carry most web traffic; the project links HTTP caching and DNS-based request routing to measurable latency gains.</p>
+ <p class="meta"><b>Course foundation:</b> W4 Cookies, caching, HTTPS, SSH, FTP; W5 Email, DNS, NAT</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement origin and edge caching servers (HTTP)</li><li><b>O2.</b> Implement DNS-based request routing</li><li><b>O3.</b> Emulate geography with netem delays</li><li><b>O4.</b> Implement cache invalidation API</li><li><b>O5.</b> Measure latency and origin load with/without CDN</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Origin + edge caches + DNS router implementation</li><li>Edge selection policies</li><li>Emulated-geography experiments</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement origin and edge caching servers (HTTP)</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement DNS-based request routing</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Emulate geography with netem delays; implement cache invalidation API</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Measure latency and origin load with/without CDN</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Origin, 3 edges, DNS router</li><li>Edge selection policies</li><li>Monitoring dashboard</li><li>Invalidation</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>CDN concepts (Lecture 4 §3.2)</li><li>Experimental results</li><li>Discussion of DNS TTL effects on routing</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>User-perceived latency</li><li>Origin offload (%)</li><li>Effect of DNS TTL on redirection accuracy</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 9111 (HTTP caching)</li><li>Kurose &amp; Ross §2.6</li><li>Nygren et al., &#x27;The Akamai Network&#x27; (2010)</li></ul></details>
+</article>
+<article class="card" data-weeks="w2 w3 w5 w6">
+ <header><span class="pid">CP07</span><span class="wk">W2</span><span class="wk">W3</span><span class="wk">W5</span><span class="wk">W6</span><span class="lang">Java or C++</span></header>
+ <h3>Network Protocol Analyzer (Mini-Wireshark)</h3>
+ <p class="ro">Analizor de protocoale de rețea (mini-Wireshark)</p>
+ <p><b>Abstract.</b> A GUI packet analyzer with live capture and pcap files, dissectors for Ethernet, ARP, IPv4, ICMP, TCP, UDP, DNS and HTTP, display filters and TCP stream reassembly.</p>
+ <p><b>Motivation and problem.</b> Protocol analyzers are the primary tool for network diagnostics; building one requires a precise understanding of every header and of stream reassembly.</p>
+ <p class="meta"><b>Course foundation:</b> W2 Layering, queueing, packet analysis; W3 Web, HTTP, sockets in C; W5 Email, DNS, NAT; W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Capture with libpcap/pcap4j</li><li><b>O2.</b> Design pluggable dissector architecture</li><li><b>O3.</b> Implement dissectors and field tree</li><li><b>O4.</b> Implement display filter language</li><li><b>O5.</b> Implement Follow TCP Stream</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Pluggable dissector architecture</li><li>Display-filter language and parser</li><li>TCP stream reassembly engine</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; capture with libpcap/pcap4j</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Design pluggable dissector architecture</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement dissectors and field tree; implement display filter language</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Implement Follow TCP Stream</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Packet list, details tree, hex pane</li><li>Filters (e.g. tcp.port == 80 &amp;&amp; ip.src == ...)</li><li>Stream reassembly</li><li>Statistics (protocol hierarchy, conversations)</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Architecture and parser design</li><li>Validation vs. Wireshark on reference captures</li><li>Performance analysis</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Decoding accuracy vs. Wireshark on reference captures</li><li>Packets/s processed</li><li>Filter expressiveness</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 791, 793/9293, 768, 1035</li><li>libpcap / pcap-ng format specification</li><li>Wireshark Developer&#x27;s Guide</li></ul></details>
+</article>
+<article class="card" data-weeks="w6">
+ <header><span class="pid">CP08</span><span class="wk">W6</span><span class="lang">Linux (scripts) + Python/Java analysis</span></header>
+ <h3>TCP Congestion Control Comparison Testbed</h3>
+ <p class="ro">Platformă experimentală pentru compararea algoritmilor de control al congestiei TCP</p>
+ <p><b>Abstract.</b> An automated testbed with network namespaces and netem that compares Reno, CUBIC and BBR for throughput, fairness and latency under varying BDP and loss.</p>
+ <p><b>Motivation and problem.</b> Choosing a congestion-control algorithm (Reno, CUBIC, BBR) affects throughput, fairness and latency; a reproducible testbed allows evidence-based comparison.</p>
+ <p class="meta"><b>Course foundation:</b> W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Build topology with network namespaces and a bottleneck</li><li><b>O2.</b> Automate experiments (iperf3, ss -ti sampling)</li><li><b>O3.</b> Vary delay, bandwidth, loss, buffer size</li><li><b>O4.</b> Compute Jain&#x27;s fairness and bufferbloat latency</li><li><b>O5.</b> Statistical analysis with repetitions</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Namespace-based testbed and automation</li><li>Experimental design with repetitions and statistics</li><li>Comparative analysis of three algorithms</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; build topology with network namespaces and a bottleneck</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Automate experiments (iperf3, ss -ti sampling)</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Vary delay, bandwidth, loss, buffer size; compute Jain&#x27;s fairness and bufferbloat latency</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Statistical analysis with repetitions</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Reproducible scripts</li><li>Data collection pipeline</li><li>Plot generation</li><li>Results dashboard (HTML)</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Algorithms explained (Reno, CUBIC, BBR)</li><li>Experimental design and threats to validity</li><li>Results and conclusions</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Throughput and link utilization</li><li>Jain fairness index</li><li>Queueing delay (bufferbloat)</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 5681</li><li>RFC 9438 (CUBIC)</li><li>Cardwell et al., &#x27;BBR&#x27; (ACM Queue, 2016)</li></ul></details>
+</article>
+<article class="card" data-weeks="w3 w7">
+ <header><span class="pid">CP09</span><span class="wk">W3</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>Peer-to-Peer File Distribution with DHT</h3>
+ <p class="ro">Sistem peer-to-peer de distribuție a fișierelor bazat pe DHT</p>
+ <p><b>Abstract.</b> A decentralized P2P system using a Kademlia-like DHT for peer and content lookup, chunked parallel downloads and integrity verification.</p>
+ <p><b>Motivation and problem.</b> P2P architectures scale with the number of peers; implementing a DHT contrasts decentralized lookup with client-server distribution (Lecture 3).</p>
+ <p class="meta"><b>Course foundation:</b> W3 Web, HTTP, sockets in C; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement node IDs, XOR distance and routing table</li><li><b>O2.</b> Implement FIND_NODE/STORE/FIND_VALUE over UDP</li><li><b>O3.</b> Implement chunk transfer over TCP with hashes</li><li><b>O4.</b> Handle churn (nodes leaving)</li><li><b>O5.</b> Evaluate lookup hops and download time vs. peers</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Kademlia-like DHT implementation</li><li>Parallel chunked transfer with integrity</li><li>Churn experiments with 50+ nodes</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement node IDs, XOR distance and routing table</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement FIND_NODE/STORE/FIND_VALUE over UDP</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement chunk transfer over TCP with hashes; handle churn (nodes leaving)</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Evaluate lookup hops and download time vs. peers</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Node application with CLI/GUI</li><li>Publish and download files</li><li>Network visualization</li><li>Simulation of 50+ nodes</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>DHT theory</li><li>Distribution time vs. client-server (Lecture 3)</li><li>Experimental evaluation</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Lookup hop count</li><li>Download time vs. number of peers</li><li>Success rate under churn</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>Maymounkov &amp; Mazières, &#x27;Kademlia&#x27; (2002)</li><li>BitTorrent BEP 3/5</li><li>Kurose &amp; Ross §2.5</li></ul></details>
+</article>
+<article class="card" data-weeks="w4">
+ <header><span class="pid">CP10</span><span class="wk">W4</span><span class="lang">Java or Go</span></header>
+ <h3>HTTP/2 Server (Subset)</h3>
+ <p class="ro">Server HTTP/2 (subset)</p>
+ <p><b>Abstract.</b> An HTTP/2 server over TLS with ALPN supporting streams, HPACK, flow control, SETTINGS, PING, GOAWAY and server-side prioritization.</p>
+ <p><b>Motivation and problem.</b> HTTP/2 solves HTTP/1.1 head-of-line blocking at application level through multiplexed streams; implementing it exposes framing, HPACK and flow control.</p>
+ <p class="meta"><b>Course foundation:</b> W4 Cookies, caching, HTTPS, SSH, FTP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Study RFC 9113 framing and stream states</li><li><b>O2.</b> Implement TLS + ALPN negotiation</li><li><b>O3.</b> Implement frame layer and stream state machine</li><li><b>O4.</b> Implement HPACK (static + dynamic table)</li><li><b>O5.</b> Test with curl --http2 and browsers, compare with HTTP/1.1</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Frame layer and stream state machine</li><li>HPACK encoder/decoder</li><li>Comparative performance study HTTP/1.1 vs. HTTP/2</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; study RFC 9113 framing and stream states</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement TLS + ALPN negotiation</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement frame layer and stream state machine; implement HPACK (static + dynamic table)</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Test with curl --http2 and browsers, compare with HTTP/1.1</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Static file serving over h2</li><li>Flow control windows</li><li>Debug frame log</li><li>Benchmark</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Stream state machine</li><li>Compliance tests (h2spec)</li><li>Performance comparison and HOL discussion</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>h2spec conformance score</li><li>Page load time for many small objects</li><li>CPU cost per request</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 9113 (HTTP/2)</li><li>RFC 7541 (HPACK)</li><li>RFC 7301 (ALPN)</li></ul></details>
+</article>
+<article class="card" data-weeks="w4 w6">
+ <header><span class="pid">CP11</span><span class="wk">W4</span><span class="wk">W6</span><span class="lang">Java or C</span></header>
+ <h3>QUIC-Inspired Multiplexed Transport over UDP</h3>
+ <p class="ro">Protocol de transport multiplexat peste UDP inspirat de QUIC</p>
+ <p><b>Abstract.</b> A UDP-based transport with encrypted packets, multiple independent streams without head-of-line blocking, connection IDs and loss recovery, carrying a simple HTTP-like protocol.</p>
+ <p><b>Motivation and problem.</b> QUIC moves transport into user space to remove TCP head-of-line blocking and enable connection migration; a simplified version shows why.</p>
+ <p class="meta"><b>Course foundation:</b> W4 Cookies, caching, HTTPS, SSH, FTP; W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design packet and stream frame format</li><li><b>O2.</b> Implement 1-RTT handshake with key exchange and AEAD</li><li><b>O3.</b> Implement independent streams and per-stream ordering</li><li><b>O4.</b> Implement ACK ranges and loss detection</li><li><b>O5.</b> Compare with TCP+TLS under loss</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Packet/frame format with independent streams</li><li>Integrated handshake and AEAD encryption</li><li>HOL-blocking experiments versus TCP+TLS</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design packet and stream frame format</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement 1-RTT handshake with key exchange and AEAD</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement independent streams and per-stream ordering; implement ACK ranges and loss detection</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Compare with TCP+TLS under loss</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Client/server library</li><li>Demo file server with parallel streams</li><li>Connection migration demo (IP change)</li><li>Trace export</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Design rationale vs. QUIC (RFC 9000)</li><li>HOL blocking experiments</li><li>Security analysis</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Completion time of parallel streams under loss</li><li>Handshake RTTs</li><li>Connection migration success</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 9000, 9001, 9002 (QUIC)</li><li>RFC 9114 (HTTP/3)</li></ul></details>
+</article>
+<article class="card" data-weeks="w5 w6">
+ <header><span class="pid">CP12</span><span class="wk">W5</span><span class="wk">W6</span><span class="lang">C (Linux, TUN/raw sockets) or Java simulation</span></header>
+ <h3>NAT Router and Firewall with Netfilter-Style Rules</h3>
+ <p class="ro">Router NAT și firewall cu reguli în stil Netfilter</p>
+ <p><b>Abstract.</b> A user-space NAT gateway using TUN interfaces that translates TCP/UDP/ICMP, tracks connections, supports port forwarding and stateful firewall rules.</p>
+ <p><b>Motivation and problem.</b> NAT is present in almost every home network and breaks end-to-end connectivity; implementing it reveals header rewriting, checksums and connection tracking.</p>
+ <p class="meta"><b>Course foundation:</b> W5 Email, DNS, NAT; W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Set up namespaces and TUN devices</li><li><b>O2.</b> Parse and rewrite IP/TCP/UDP headers with checksum update</li><li><b>O3.</b> Implement connection tracking and timeouts</li><li><b>O4.</b> Implement rule engine (accept/drop, port forward)</li><li><b>O5.</b> Test web browsing and FTP through the gateway</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>User-space NAT gateway over TUN</li><li>Connection tracking and rule engine</li><li>Functional tests with HTTP, DNS and FTP</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; set up namespaces and TUN devices</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Parse and rewrite IP/TCP/UDP headers with checksum update</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement connection tracking and timeouts; implement rule engine (accept/drop, port forward)</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Test web browsing and FTP through the gateway</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Gateway daemon</li><li>Rule config</li><li>Connection table viewer</li><li>Logging</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>NAT and conntrack design</li><li>FTP and NAT problem with active mode</li><li>Performance and correctness tests</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Correctness for TCP/UDP/ICMP</li><li>Forwarding throughput</li><li>Behaviour classification (cone/symmetric)</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 3022 (Traditional NAT)</li><li>RFC 4787 (NAT UDP behaviour)</li><li>RFC 5382 (NAT TCP)</li></ul></details>
+</article>
+<article class="card" data-weeks="w3 w5 w7">
+ <header><span class="pid">CP13</span><span class="wk">W3</span><span class="wk">W5</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>Distributed Chat System with Federation</h3>
+ <p class="ro">Sistem de chat distribuit cu federare între servere</p>
+ <p><b>Abstract.</b> Multiple chat servers that federate (like email domains): users user@server, DNS SRV-based server discovery, server-to-server TLS links and offline message storage.</p>
+ <p><b>Motivation and problem.</b> Federated systems (email, Matrix, XMPP) let independent domains interoperate; the project transfers SMTP&#x27;s federation model to instant messaging.</p>
+ <p class="meta"><b>Course foundation:</b> W3 Web, HTTP, sockets in C; W5 Email, DNS, NAT; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design client-server and server-server protocols</li><li><b>O2.</b> Implement DNS SRV lookup for federation</li><li><b>O3.</b> Implement TLS server-to-server links</li><li><b>O4.</b> Implement offline storage and delivery</li><li><b>O5.</b> Test with 3 servers and 30 clients</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Client-server and server-server protocols</li><li>DNS SRV-based discovery and TLS links</li><li>Multi-server failure and scalability tests</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design client-server and server-server protocols</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement DNS SRV lookup for federation</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement TLS server-to-server links; implement offline storage and delivery</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Test with 3 servers and 30 clients</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Server and GUI client</li><li>Federated messaging</li><li>Presence</li><li>Admin console</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Analogy with SMTP architecture</li><li>Protocol specs</li><li>Scalability and failure tests</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>End-to-end delivery latency</li><li>Messages/s per server</li><li>Behaviour when a federated server fails</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 2782 (DNS SRV)</li><li>RFC 6120 (XMPP core)</li><li>Matrix specification</li></ul></details>
+</article>
+<article class="card" data-weeks="w1 w2 w6">
+ <header><span class="pid">CP14</span><span class="wk">W1</span><span class="wk">W2</span><span class="wk">W6</span><span class="lang">C or Java</span></header>
+ <h3>Network Emulator (User-Space netem)</h3>
+ <p class="ro">Emulator de rețea în spațiul utilizator</p>
+ <p><b>Abstract.</b> A UDP/TCP proxy that emulates delay, jitter, bandwidth limits, loss (Bernoulli and Gilbert-Elliott), reordering and queue limits, validated against tc netem.</p>
+ <p><b>Motivation and problem.</b> Network emulators reproduce delay, loss and bandwidth limits for testing; building one ties queueing theory (Week 2) to practice.</p>
+ <p class="meta"><b>Course foundation:</b> W1 Networks, edge &amp; core, delay; W2 Layering, queueing, packet analysis; W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design pipeline: queue, scheduler, impairments</li><li><b>O2.</b> Implement token-bucket bandwidth limit and finite buffer</li><li><b>O3.</b> Implement loss models and reordering</li><li><b>O4.</b> Validate delay distribution and queueing behaviour</li><li><b>O5.</b> Use it to reproduce Lecture 2 queueing results</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Impairment pipeline (token bucket, finite queue, loss models)</li><li>Validation methodology against tc netem</li><li>Reproduction of queueing results from Lecture 2</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design pipeline: queue, scheduler, impairments</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement token-bucket bandwidth limit and finite buffer</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement loss models and reordering; validate delay distribution and queueing behaviour</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Use it to reproduce Lecture 2 queueing results</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Config profiles (3G, satellite, Wi-Fi)</li><li>Live statistics</li><li>Scriptable API</li><li>Trace output</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Queueing theory link (traffic intensity, Little&#x27;s law)</li><li>Validation experiments</li><li>Comparison with tc netem</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Accuracy of delay distribution</li><li>Accuracy of loss models</li><li>Maximum supported throughput</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>tc-netem documentation</li><li>Gilbert–Elliott loss model</li><li>Kleinrock, &#x27;Queueing Systems&#x27;</li></ul></details>
+</article>
+<article class="card" data-weeks="w3 w6 w7">
+ <header><span class="pid">CP15</span><span class="wk">W3</span><span class="wk">W6</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>Load Balancer with Health Checks</h3>
+ <p class="ro">Echilibrator de încărcare cu verificări de disponibilitate</p>
+ <p><b>Abstract.</b> A layer-4/layer-7 load balancer supporting round-robin, least-connections and consistent hashing, with active health checks and sticky sessions via cookies.</p>
+ <p><b>Motivation and problem.</b> Load balancers are central to scalable services; the project compares distribution algorithms and failure handling at layers 4 and 7.</p>
+ <p class="meta"><b>Course foundation:</b> W3 Web, HTTP, sockets in C; W6 Transport layer, TCP/UDP; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement L4 TCP proxying with NIO</li><li><b>O2.</b> Implement L7 HTTP routing</li><li><b>O3.</b> Implement algorithms and health checks</li><li><b>O4.</b> Implement cookie-based stickiness</li><li><b>O5.</b> Benchmark and fault-injection tests</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>L4 and L7 proxy implementation with NIO</li><li>Algorithms: round-robin, least-connections, consistent hashing</li><li>Fault-injection test campaign</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement L4 TCP proxying with NIO</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement L7 HTTP routing</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement algorithms and health checks; implement cookie-based stickiness</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Benchmark and fault-injection tests</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Config of backends</li><li>Algorithm switch at runtime</li><li>Stats dashboard</li><li>Graceful backend removal</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Architecture</li><li>Algorithm comparison results</li><li>Failure scenarios</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Latency percentiles</li><li>Load distribution evenness</li><li>Recovery time after backend failure</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 9110</li><li>Karger et al., &#x27;Consistent Hashing&#x27; (1997)</li><li>HAProxy documentation</li></ul></details>
+</article>
+<article class="card" data-weeks="w7">
+ <header><span class="pid">CP16</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>Event-Driven Server with Java NIO</h3>
+ <p class="ro">Server bazat pe evenimente cu Java NIO</p>
+ <p><b>Abstract.</b> A non-blocking server framework using Selector, with pluggable protocols (echo, HTTP, chat), compared with thread-per-client under 10,000 connections.</p>
+ <p><b>Motivation and problem.</b> Thread-per-client servers (Week 7) do not scale to tens of thousands of connections; event-driven I/O does. The project quantifies the difference.</p>
+ <p class="meta"><b>Course foundation:</b> W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Study blocking vs. non-blocking I/O</li><li><b>O2.</b> Implement reactor pattern with Selector</li><li><b>O3.</b> Implement buffer management and framing</li><li><b>O4.</b> Implement protocols on top</li><li><b>O5.</b> Benchmark C10K scenario</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Reactor-pattern framework</li><li>Three protocols on top (echo, HTTP, chat)</li><li>C10K benchmark campaign</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; study blocking vs. non-blocking I/O</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement reactor pattern with Selector</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement buffer management and framing; implement protocols on top</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Benchmark C10K scenario</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Framework library</li><li>Three protocol demos</li><li>Benchmark client</li><li>Metrics</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Reactor pattern and design</li><li>Performance and memory comparison</li><li>Limits and tuning (ulimit, ephemeral ports)</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Maximum concurrent connections</li><li>Latency under load</li><li>Memory per connection</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>Schmidt, &#x27;Reactor&#x27; pattern</li><li>Java NIO documentation</li><li>Kegel, &#x27;The C10K problem&#x27;</li></ul></details>
+</article>
+<article class="card" data-weeks="w4">
+ <header><span class="pid">CP17</span><span class="wk">W4</span><span class="lang">Java</span></header>
+ <h3>Secure File Transfer Protocol Implementation</h3>
+ <p class="ro">Protocol securizat de transfer de fișiere</p>
+ <p><b>Abstract.</b> A file transfer protocol with TLS 1.3 mutual authentication, resumable transfers, integrity checks, directory sync and bandwidth control — a modern replacement for FTP.</p>
+ <p><b>Motivation and problem.</b> FTP sends credentials in clear and needs two connections; the project designs a modern single-connection alternative with TLS and resume.</p>
+ <p class="meta"><b>Course foundation:</b> W4 Cookies, caching, HTTPS, SSH, FTP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Specify protocol (single connection, multiplexed control/data)</li><li><b>O2.</b> Implement mutual TLS with own CA</li><li><b>O3.</b> Implement resume by offset and chunk hashes</li><li><b>O4.</b> Implement directory operations</li><li><b>O5.</b> Compare with FTP, SFTP and SCP</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Protocol specification and implementation</li><li>Mutual TLS with own certificate authority</li><li>Benchmark vs. FTP, SFTP and SCP</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; specify protocol (single connection, multiplexed control/data)</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement mutual TLS with own CA</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement resume by offset and chunk hashes; implement directory operations</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Compare with FTP, SFTP and SCP</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Client GUI and server</li><li>Certificate management tool</li><li>Resume after interruption</li><li>Transfer queue</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Design vs. FTP&#x27;s two connections</li><li>Security analysis</li><li>Benchmark</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Transfer throughput</li><li>Resume correctness</li><li>Security comparison table</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 959 (FTP)</li><li>RFC 8446 (TLS 1.3)</li><li>draft-ietf-secsh-filexfer (SFTP)</li></ul></details>
+</article>
+<article class="card" data-weeks="w6 w7">
+ <header><span class="pid">CP18</span><span class="wk">W6</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>Real-Time Voice Chat over UDP</h3>
+ <p class="ro">Aplicație de convorbiri vocale în timp real peste UDP</p>
+ <p><b>Abstract.</b> Voice calls over UDP with RTP-like packets, jitter buffer, packet loss concealment and quality statistics (loss, jitter, latency).</p>
+ <p><b>Motivation and problem.</b> Real-time media prefers timeliness over reliability; the project shows why UDP is used and how jitter and loss are compensated.</p>
+ <p class="meta"><b>Course foundation:</b> W6 Transport layer, TCP/UDP; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Capture/playback audio with javax.sound</li><li><b>O2.</b> Packetize with sequence numbers and timestamps</li><li><b>O3.</b> Implement adaptive jitter buffer</li><li><b>O4.</b> Implement loss concealment</li><li><b>O5.</b> Measure quality under netem</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>RTP-like packetization</li><li>Adaptive jitter buffer</li><li>Quality experiments under netem</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; capture/playback audio with javax.sound</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Packetize with sequence numbers and timestamps</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement adaptive jitter buffer; implement loss concealment</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Measure quality under netem</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Call setup via TCP signaling</li><li>Voice over UDP</li><li>Live statistics</li><li>Codec choice (PCM/compressed)</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Why UDP for real-time</li><li>Jitter buffer design</li><li>Quality experiments (MOS estimate)</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Mouth-to-ear delay</li><li>Effective loss after concealment</li><li>Estimated MOS (E-model)</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 3550 (RTP)</li><li>ITU-T G.107 (E-model)</li><li>ITU-T G.711</li></ul></details>
+</article>
+<article class="card" data-weeks="w3 w4">
+ <header><span class="pid">CP19</span><span class="wk">W3</span><span class="wk">W4</span><span class="lang">Java</span></header>
+ <h3>Web Application Firewall (Reverse Proxy)</h3>
+ <p class="ro">Firewall pentru aplicații web (proxy invers)</p>
+ <p><b>Abstract.</b> A reverse proxy that inspects HTTP requests and blocks common attacks (SQLi, XSS, path traversal) using a rule engine, with rate limiting and logging.</p>
+ <p><b>Motivation and problem.</b> Web applications are the most attacked surface; an inspecting reverse proxy shows how HTTP-level defences work and where they fail.</p>
+ <p class="meta"><b>Course foundation:</b> W3 Web, HTTP, sockets in C; W4 Cookies, caching, HTTPS, SSH, FTP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement reverse proxy with keep-alive</li><li><b>O2.</b> Implement rule engine (regex + scoring)</li><li><b>O3.</b> Implement rate limiting (token bucket)</li><li><b>O4.</b> Build vulnerable test app</li><li><b>O5.</b> Evaluate detection rate and false positives</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Reverse proxy with rule engine and rate limiting</li><li>Vulnerable test application for evaluation</li><li>Detection and false-positive study</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement reverse proxy with keep-alive</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement rule engine (regex + scoring)</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement rate limiting (token bucket); build vulnerable test app</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Evaluate detection rate and false positives</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Rule files</li><li>Block/monitor mode</li><li>Dashboard of blocked requests</li><li>Rate limit config</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>HTTP attack surface</li><li>Evaluation methodology and results</li><li>Limits (TLS, encodings)</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Detection rate</li><li>False-positive rate</li><li>Added latency</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>OWASP Top 10</li><li>OWASP Core Rule Set</li><li>RFC 9110</li></ul></details>
+</article>
+<article class="card" data-weeks="w4 w5">
+ <header><span class="pid">CP20</span><span class="wk">W4</span><span class="wk">W5</span><span class="lang">Java or Python</span></header>
+ <h3>DNS over HTTPS Proxy with Privacy Analysis</h3>
+ <p class="ro">Proxy DNS-over-HTTPS și analiza confidențialității</p>
+ <p><b>Abstract.</b> A local DNS stub that receives UDP queries and forwards them via DoH (RFC 8484), with caching, plus an analysis of what an on-path observer sees for UDP DNS vs. DoH.</p>
+ <p><b>Motivation and problem.</b> Classic DNS is visible to any on-path observer; DoH encrypts it. The project measures the privacy gain and the latency cost.</p>
+ <p class="meta"><b>Course foundation:</b> W4 Cookies, caching, HTTPS, SSH, FTP; W5 Email, DNS, NAT</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement UDP DNS listener</li><li><b>O2.</b> Implement DoH client (wire format over HTTP/2)</li><li><b>O3.</b> Add caching and failover</li><li><b>O4.</b> Capture and compare traffic</li><li><b>O5.</b> Measure latency overhead</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Local stub resolver forwarding over DoH</li><li>Caching and provider failover</li><li>Traffic-visibility comparison study</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement UDP DNS listener</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement DoH client (wire format over HTTP/2)</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Add caching and failover; capture and compare traffic</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Measure latency overhead</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Stub resolver daemon</li><li>Provider selection</li><li>Statistics</li><li>Logging toggle</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>DNS privacy (Lecture 5 §8.5)</li><li>Traffic comparison captures</li><li>Latency results</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Latency overhead vs. UDP DNS</li><li>Information visible to an observer</li><li>Cache hit ratio</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 8484 (DoH)</li><li>RFC 7858 (DoT)</li><li>RFC 9076 (DNS privacy)</li></ul></details>
+</article>
+<article class="card" data-weeks="w3 w6 w7">
+ <header><span class="pid">CP21</span><span class="wk">W3</span><span class="wk">W6</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>IoT Telemetry System with MQTT-like Broker</h3>
+ <p class="ro">Sistem de telemetrie IoT cu broker de tip MQTT</p>
+ <p><b>Abstract.</b> A publish/subscribe broker with topics, wildcards, QoS 0/1, retained messages and keep-alive, plus simulated sensor clients and a dashboard.</p>
+ <p><b>Motivation and problem.</b> Publish/subscribe is the dominant pattern for IoT; designing a broker exercises binary protocols, QoS and scalable concurrency.</p>
+ <p class="meta"><b>Course foundation:</b> W3 Web, HTTP, sockets in C; W6 Transport layer, TCP/UDP; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design binary protocol (CONNECT, PUBLISH, SUBSCRIBE, PUBACK, PINGREQ)</li><li><b>O2.</b> Implement broker with topic tree</li><li><b>O3.</b> Implement QoS 1 with retransmission</li><li><b>O4.</b> Build sensor simulator and dashboard</li><li><b>O5.</b> Scale test with 1000 clients</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Binary pub/sub protocol and broker</li><li>QoS 1 delivery with retransmission</li><li>Scalability test with 1000 clients</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design binary protocol (CONNECT, PUBLISH, SUBSCRIBE, PUBACK, PINGREQ)</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement broker with topic tree</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement QoS 1 with retransmission; build sensor simulator and dashboard</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Scale test with 1000 clients</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Broker</li><li>Sensor simulator</li><li>Web dashboard</li><li>Persistence of retained messages</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Pub/sub vs. client-server</li><li>Protocol spec</li><li>Scalability results</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Messages/s</li><li>End-to-end delivery latency</li><li>Delivery guarantees under loss</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>MQTT v5.0 (OASIS)</li><li>Eugster et al., &#x27;The many faces of publish/subscribe&#x27; (2003)</li></ul></details>
+</article>
+<article class="card" data-weeks="w1 w2">
+ <header><span class="pid">CP22</span><span class="wk">W1</span><span class="wk">W2</span><span class="lang">C (Linux)</span></header>
+ <h3>Traceroute and Path MTU Discovery Tool with Raw Sockets</h3>
+ <p class="ro">Traceroute și descoperirea MTU a căii cu socket-uri raw</p>
+ <p><b>Abstract.</b> A traceroute implementation using raw sockets with UDP, ICMP and TCP SYN probes, AS-number annotation, and path MTU discovery using DF flag.</p>
+ <p><b>Motivation and problem.</b> Traceroute is the classic tool for seeing the &#x27;network of networks&#x27;; implementing several probe methods shows how firewalls and ICMP shape what we can observe.</p>
+ <p class="meta"><b>Course foundation:</b> W1 Networks, edge &amp; core, delay; W2 Layering, queueing, packet analysis</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement raw socket probe sending with TTL</li><li><b>O2.</b> Parse ICMP Time Exceeded and Destination Unreachable</li><li><b>O3.</b> Implement three probe methods</li><li><b>O4.</b> Implement PMTUD with DF bit</li><li><b>O5.</b> Compare paths and explain differences</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Raw-socket traceroute with UDP/ICMP/TCP probes</li><li>Path MTU discovery</li><li>Measurement study over many destinations</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement raw socket probe sending with TTL</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Parse ICMP Time Exceeded and Destination Unreachable</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement three probe methods; implement PMTUD with DF bit</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Compare paths and explain differences</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>CLI with options like traceroute</li><li>Per-hop RTT statistics</li><li>Path MTU result</li><li>JSON output</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>ICMP mechanisms</li><li>Comparison of probe types across firewalls</li><li>Network-of-networks analysis (Lecture 1 §6)</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Path completeness per probe type</li><li>PMTU accuracy</li><li>AS-level path diversity</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 792 (ICMP)</li><li>RFC 1191 (PMTUD)</li><li>RFC 1393</li><li>Augustin et al., &#x27;Paris traceroute&#x27; (2006)</li></ul></details>
+</article>
+<article class="card" data-weeks="w3 w4 w7">
+ <header><span class="pid">CP23</span><span class="wk">W3</span><span class="wk">W4</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>Collaborative Text Editor over WebSockets</h3>
+ <p class="ro">Editor de text colaborativ peste WebSocket</p>
+ <p><b>Abstract.</b> A real-time collaborative editor with own WebSocket implementation (handshake + framing per RFC 6455) and operational transformation or CRDT for consistency.</p>
+ <p><b>Motivation and problem.</b> Real-time collaboration needs persistent bidirectional channels and conflict resolution; the project combines HTTP Upgrade, framing and distributed consistency.</p>
+ <p class="meta"><b>Course foundation:</b> W3 Web, HTTP, sockets in C; W4 Cookies, caching, HTTPS, SSH, FTP; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement HTTP Upgrade and WebSocket framing</li><li><b>O2.</b> Implement document model with OT/CRDT</li><li><b>O3.</b> Implement presence and cursors</li><li><b>O4.</b> Handle reconnection and resync</li><li><b>O5.</b> Test with concurrent editors</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Own WebSocket implementation</li><li>OT or CRDT consistency algorithm</li><li>Convergence and latency experiments</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement HTTP Upgrade and WebSocket framing</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement document model with OT/CRDT</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement presence and cursors; handle reconnection and resync</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Test with concurrent editors</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Browser client</li><li>Server</li><li>Document history</li><li>Multiple documents</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>WebSocket protocol analysis</li><li>Consistency algorithm</li><li>Latency and convergence tests</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Convergence correctness</li><li>Update propagation latency</li><li>Concurrent editors supported</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 6455 (WebSocket)</li><li>Shapiro et al., &#x27;CRDTs&#x27; (2011)</li><li>Ellis &amp; Gibbs, &#x27;Operational Transformation&#x27; (1989)</li></ul></details>
+</article>
+<article class="card" data-weeks="w5">
+ <header><span class="pid">CP24</span><span class="wk">W5</span><span class="lang">Java or Python</span></header>
+ <h3>Email Security Analyzer (SPF, DKIM, DMARC)</h3>
+ <p class="ro">Analizor de securitate a mesajelor email (SPF, DKIM, DMARC)</p>
+ <p><b>Abstract.</b> A tool that parses raw emails, verifies DKIM signatures, evaluates SPF via DNS lookups, checks DMARC alignment and traces the Received path.</p>
+ <p><b>Motivation and problem.</b> SMTP has no built-in sender authentication; SPF, DKIM and DMARC were added on top using DNS. The project implements and evaluates them.</p>
+ <p class="meta"><b>Course foundation:</b> W5 Email, DNS, NAT</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Parse headers and Received chain</li><li><b>O2.</b> Implement SPF evaluation (mechanisms, includes)</li><li><b>O3.</b> Implement DKIM verification (canonicalization, RSA)</li><li><b>O4.</b> Implement DMARC policy check</li><li><b>O5.</b> Test on a corpus of real and spoofed messages</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>SPF evaluator, DKIM verifier and DMARC checker</li><li>Received-path analyzer</li><li>Evaluation on a labelled corpus</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; parse headers and Received chain</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement SPF evaluation (mechanisms, includes)</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement DKIM verification (canonicalization, RSA); implement DMARC policy check</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Test on a corpus of real and spoofed messages</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>.eml input</li><li>Verdict report</li><li>Received path visualization</li><li>Batch mode</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Email authentication standards</li><li>Evaluation results</li><li>Limits of each mechanism</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Verdict accuracy</li><li>Agreement with reference implementations</li><li>DNS lookups per message</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 7208 (SPF)</li><li>RFC 6376 (DKIM)</li><li>RFC 7489 (DMARC)</li></ul></details>
+</article>
+<article class="card" data-weeks="w1 w2 w6">
+ <header><span class="pid">CP25</span><span class="wk">W1</span><span class="wk">W2</span><span class="wk">W6</span><span class="lang">Linux scripts + Java/Python</span></header>
+ <h3>Bufferbloat Analyzer</h3>
+ <p class="ro">Analizor de bufferbloat</p>
+ <p><b>Abstract.</b> A testbed and tool that measures latency under load with different buffer sizes and queue disciplines (pfifo, fq_codel, cake), connecting queueing theory with practice.</p>
+ <p><b>Motivation and problem.</b> Oversized buffers inflate latency under load; the project links traffic intensity and Little&#x27;s law to modern queue disciplines (fq_codel, cake).</p>
+ <p class="meta"><b>Course foundation:</b> W1 Networks, edge &amp; core, delay; W2 Layering, queueing, packet analysis; W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Build bottleneck with namespaces and tc</li><li><b>O2.</b> Generate load (TCP bulk) and measure RTT concurrently</li><li><b>O3.</b> Vary buffer size and qdisc</li><li><b>O4.</b> Analyze delay distributions</li><li><b>O5.</b> Relate to traffic intensity and Little&#x27;s law</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Testbed with configurable bottleneck</li><li>Latency-under-load measurement tool</li><li>Comparison of queue disciplines</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; build bottleneck with namespaces and tc</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Generate load (TCP bulk) and measure RTT concurrently</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Vary buffer size and qdisc; analyze delay distributions</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Relate to traffic intensity and Little&#x27;s law</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Automation scripts</li><li>Measurement tool</li><li>Graphs</li><li>Report generator</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Theory of queueing delay and loss</li><li>Experimental results</li><li>Recommendations</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>RTT under load</li><li>Throughput</li><li>Delay distribution percentiles</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 8289 (CoDel)</li><li>RFC 8290 (FQ-CoDel)</li><li>Gettys &amp; Nichols, &#x27;Bufferbloat&#x27; (2011)</li></ul></details>
+</article>
+<article class="card" data-weeks="w4 w7">
+ <header><span class="pid">CP26</span><span class="wk">W4</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>Mini Distributed Web Cache with Consistent Hashing</h3>
+ <p class="ro">Cache web distribuit cu hashing consistent</p>
+ <p><b>Abstract.</b> A cluster of caching proxies that share the URL space using consistent hashing, supports node join/leave and replication of hot objects.</p>
+ <p><b>Motivation and problem.</b> Scaling caches beyond one node requires partitioning the URL space; consistent hashing minimizes reshuffling when nodes join or leave.</p>
+ <p class="meta"><b>Course foundation:</b> W4 Cookies, caching, HTTPS, SSH, FTP; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement consistent hashing ring with virtual nodes</li><li><b>O2.</b> Implement inter-node forwarding</li><li><b>O3.</b> Implement membership with heartbeats</li><li><b>O4.</b> Implement hot-object replication</li><li><b>O5.</b> Evaluate hit ratio and rebalancing cost</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Consistent-hashing ring with virtual nodes</li><li>Membership protocol with heartbeats</li><li>Zipf-workload evaluation</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement consistent hashing ring with virtual nodes</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement inter-node forwarding</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement membership with heartbeats; implement hot-object replication</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Evaluate hit ratio and rebalancing cost</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Cache nodes</li><li>Admin view of ring</li><li>Workload generator</li><li>Metrics</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Design</li><li>Experiments with Zipf workloads</li><li>Comparison with single cache</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Global hit ratio</li><li>Objects moved on membership change</li><li>Request latency</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>Karger et al. (1997)</li><li>RFC 9111</li><li>DeCandia et al., &#x27;Dynamo&#x27; (2007)</li></ul></details>
+</article>
+<article class="card" data-weeks="w2 w6">
+ <header><span class="pid">CP27</span><span class="wk">W2</span><span class="wk">W6</span><span class="lang">C or Java</span></header>
+ <h3>Network Intrusion Detection System</h3>
+ <p class="ro">Sistem de detecție a intruziunilor în rețea</p>
+ <p><b>Abstract.</b> A signature- and anomaly-based NIDS: captures packets, reassembles TCP streams, applies Snort-like rules and detects port scans and SYN floods.</p>
+ <p><b>Motivation and problem.</b> Intrusion detection needs packet decoding, stream reassembly and pattern matching at line rate; the project evaluates signature and anomaly approaches in an isolated lab.</p>
+ <p class="meta"><b>Course foundation:</b> W2 Layering, queueing, packet analysis; W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Capture and decode packets</li><li><b>O2.</b> Implement TCP reassembly</li><li><b>O3.</b> Implement rule parser and matcher</li><li><b>O4.</b> Implement scan/flood detectors (thresholds)</li><li><b>O5.</b> Evaluate on test traffic in an isolated lab</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Capture, decode and reassembly pipeline</li><li>Rule language and matcher</li><li>Scan and SYN-flood detectors with evaluation</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; capture and decode packets</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement TCP reassembly</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement rule parser and matcher; implement scan/flood detectors (thresholds)</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Evaluate on test traffic in an isolated lab</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Rule files</li><li>Alert log and dashboard</li><li>pcap replay mode</li><li>Performance stats</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>NIDS architecture</li><li>Detection evaluation (TPR/FPR)</li><li>Ethics and isolated lab setup</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>True-positive and false-positive rates</li><li>Packets/s processed</li><li>Detection delay</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>Snort/Suricata rule documentation</li><li>Paxson, &#x27;Bro&#x27; (1999)</li><li>RFC 4987 (SYN flooding)</li></ul></details>
+</article>
+<article class="card" data-weeks="w3 w4 w6">
+ <header><span class="pid">CP28</span><span class="wk">W3</span><span class="wk">W4</span><span class="wk">W6</span><span class="lang">Java + web client</span></header>
+ <h3>HTTP Adaptive Video Streaming System</h3>
+ <p class="ro">Sistem de streaming video adaptiv peste HTTP</p>
+ <p><b>Abstract.</b> A DASH-like streaming system: server with multiple bitrate segments and manifest, client with throughput- and buffer-based bitrate adaptation, evaluated under varying bandwidth.</p>
+ <p><b>Motivation and problem.</b> Most video is delivered as HTTP segments with bitrate adaptation; the project combines HTTP, TCP throughput dynamics and quality of experience.</p>
+ <p class="meta"><b>Course foundation:</b> W3 Web, HTTP, sockets in C; W4 Cookies, caching, HTTPS, SSH, FTP; W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Segment video at several bitrates (ffmpeg)</li><li><b>O2.</b> Implement HTTP server and manifest</li><li><b>O3.</b> Implement client with adaptation algorithms</li><li><b>O4.</b> Emulate bandwidth changes with tc</li><li><b>O5.</b> Measure rebuffering and quality switches</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Segmenting pipeline and streaming server</li><li>Two adaptation algorithms</li><li>QoE evaluation under bandwidth traces</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; segment video at several bitrates (ffmpeg)</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement HTTP server and manifest</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement client with adaptation algorithms; emulate bandwidth changes with tc</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Measure rebuffering and quality switches</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Streaming server</li><li>Player with stats overlay</li><li>Two adaptation algorithms</li><li>Experiment scripts</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Why HTTP/TCP for video</li><li>Algorithm design</li><li>QoE evaluation</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Rebuffering time</li><li>Average bitrate</li><li>Number of quality switches</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>ISO/IEC 23009-1 (MPEG-DASH)</li><li>RFC 8216 (HLS)</li><li>Huang et al., &#x27;Buffer-based rate adaptation&#x27; (2014)</li></ul></details>
+</article>
+<article class="card" data-weeks="w1 w2">
+ <header><span class="pid">CP29</span><span class="wk">W1</span><span class="wk">W2</span><span class="lang">Java</span></header>
+ <h3>Simulator of a Network of Routers (Store-and-Forward)</h3>
+ <p class="ro">Simulator de rețea de rutere cu comutare store-and-forward</p>
+ <p><b>Abstract.</b> A discrete-event simulator of packets traversing a topology of routers with finite queues, measuring delay components, loss and throughput, validated against analytical formulas.</p>
+ <p><b>Motivation and problem.</b> Delay components (Week 1) and queueing (Week 2) are usually studied analytically; a discrete-event simulator validates the formulas and explores where they break.</p>
+ <p class="meta"><b>Course foundation:</b> W1 Networks, edge &amp; core, delay; W2 Layering, queueing, packet analysis</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement discrete-event engine</li><li><b>O2.</b> Model links (rate, propagation) and queues</li><li><b>O3.</b> Generate traffic (Poisson, bursty)</li><li><b>O4.</b> Collect per-component delay statistics</li><li><b>O5.</b> Validate against M/M/1 and seminar problems</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Discrete-event simulation engine</li><li>Traffic models (Poisson, bursty)</li><li>Validation against M/M/1 and seminar problems</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement discrete-event engine</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Model links (rate, propagation) and queues</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Generate traffic (Poisson, bursty); collect per-component delay statistics</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Validate against M/M/1 and seminar problems</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Topology editor/file</li><li>Simulation run with progress</li><li>Statistics and graphs</li><li>Scenario comparison</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Simulation methodology</li><li>Validation results</li><li>Experiments on packet vs. circuit switching</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Agreement with analytical results</li><li>Delay components per hop</li><li>Loss vs. buffer size</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>Law &amp; Kelton, &#x27;Simulation Modeling&#x27;</li><li>Kleinrock, &#x27;Queueing Systems&#x27;</li><li>ns-3 documentation</li></ul></details>
+</article>
+<article class="card" data-weeks="w4 w7">
+ <header><span class="pid">CP30</span><span class="wk">W4</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>Secure Messaging App with End-to-End Encryption</h3>
+ <p class="ro">Aplicație de mesagerie securizată cu criptare end-to-end</p>
+ <p><b>Abstract.</b> A client-server messenger where the server only relays ciphertext: X25519 key agreement, AES-GCM, key fingerprint verification, offline delivery.</p>
+ <p><b>Motivation and problem.</b> TLS protects data only between client and server; end-to-end encryption removes trust in the server. The project shows the difference and its limits.</p>
+ <p class="meta"><b>Course foundation:</b> W4 Cookies, caching, HTTPS, SSH, FTP; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design protocol and key directory</li><li><b>O2.</b> Implement key exchange and encryption</li><li><b>O3.</b> Implement fingerprint verification UI</li><li><b>O4.</b> Implement offline storage on server</li><li><b>O5.</b> Security review and captures</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Key directory and relay protocol</li><li>E2E encryption with fingerprint verification</li><li>Metadata-leakage analysis</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design protocol and key directory</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement key exchange and encryption</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement fingerprint verification UI; implement offline storage on server</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Security review and captures</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Server relay</li><li>GUI client</li><li>Fingerprint/QR verification</li><li>Group chat (optional)</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Threat model</li><li>Comparison with TLS-only security</li><li>Analysis of metadata leakage</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Message latency</li><li>Cryptographic overhead</li><li>Security properties checklist</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>Signal protocol documentation (X3DH, Double Ratchet)</li><li>RFC 7748</li><li>RFC 8446</li></ul></details>
+</article>
+<article class="card" data-weeks="w6">
+ <header><span class="pid">CP31</span><span class="wk">W6</span><span class="lang">C (Linux)</span></header>
+ <h3>Packet-Level TCP Implementation on TUN</h3>
+ <p class="ro">Implementare TCP la nivel de pachet peste interfață TUN</p>
+ <p><b>Abstract.</b> A minimal TCP stack in user space over a TUN device that can accept connections from the Linux kernel: handshake, data transfer, ACKs, retransmission and teardown.</p>
+ <p><b>Motivation and problem.</b> Implementing TCP itself, interoperating with the Linux kernel, is the deepest possible exercise on the transport layer (Week 6).</p>
+ <p class="meta"><b>Course foundation:</b> W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Set up TUN device and IP parsing</li><li><b>O2.</b> Implement TCP header parsing and checksum</li><li><b>O3.</b> Implement TCB and state machine (RFC 9293)</li><li><b>O4.</b> Implement send/receive buffers and retransmission</li><li><b>O5.</b> Interoperate with nc and curl</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>User-space TCP state machine</li><li>Send/receive buffers and retransmission</li><li>Interoperability tests with nc and curl</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; set up TUN device and IP parsing</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement TCP header parsing and checksum</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement TCB and state machine (RFC 9293); implement send/receive buffers and retransmission</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Interoperate with nc and curl</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>User-space stack</li><li>Echo and simple HTTP server on top</li><li>State trace log</li><li>Wireshark validation</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>State machine implementation</li><li>Interoperability tests</li><li>Limitations vs. kernel TCP</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Interoperability success rate</li><li>Throughput vs. kernel TCP</li><li>State-machine coverage</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 9293 (TCP)</li><li>RFC 6298</li><li>Stevens, &#x27;TCP/IP Illustrated&#x27; vol. 1–2</li></ul></details>
+</article>
+<article class="card" data-weeks="w1 w6 w7">
+ <header><span class="pid">CP32</span><span class="wk">W1</span><span class="wk">W6</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>Network Management via SNMP-like Agent and Manager</h3>
+ <p class="ro">Sistem de management al rețelei cu agent și manager de tip SNMP</p>
+ <p><b>Abstract.</b> An agent exposing interface counters and system info over UDP with a simple MIB tree, and a manager that polls agents, graphs traffic and raises threshold alarms.</p>
+ <p><b>Motivation and problem.</b> Network management relies on agents exposing counters and managers polling them; the project designs a simplified SNMP-like system for the lab.</p>
+ <p class="meta"><b>Course foundation:</b> W1 Networks, edge &amp; core, delay; W6 Transport layer, TCP/UDP; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design MIB tree and message format (GET, GETNEXT, SET, TRAP)</li><li><b>O2.</b> Implement agent reading OS counters</li><li><b>O3.</b> Implement manager with polling scheduler</li><li><b>O4.</b> Implement graphs and alarms</li><li><b>O5.</b> Test with 5 lab hosts</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>MIB tree and message protocol</li><li>Agent reading OS counters</li><li>Manager with graphs and alarms</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design MIB tree and message format (GET, GETNEXT, SET, TRAP)</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement agent reading OS counters</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement manager with polling scheduler; implement graphs and alarms</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Test with 5 lab hosts</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Agent and manager</li><li>Traffic graphs per interface</li><li>Trap notifications</li><li>Config</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Network management concepts</li><li>Protocol spec</li><li>Results</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Polling accuracy</li><li>Scalability (agents per manager)</li><li>Alarm latency</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 3411–3418 (SNMPv3)</li><li>RFC 2863 (IF-MIB)</li></ul></details>
+</article>
+<article class="card" data-weeks="w5">
+ <header><span class="pid">CP33</span><span class="wk">W5</span><span class="lang">Java or Python + scripts</span></header>
+ <h3>Anycast/Geo DNS Load Distribution Experiment</h3>
+ <p class="ro">Distribuția încărcării prin DNS geografic (anycast/geo-DNS)</p>
+ <p><b>Abstract.</b> An authoritative DNS server for a lab zone that answers differently based on client subnet (geo-DNS), weighted round-robin and health, with TTL impact analysis.</p>
+ <p><b>Motivation and problem.</b> Large services steer users with DNS answers; the project builds an authoritative server with policies and measures the effect of TTL.</p>
+ <p class="meta"><b>Course foundation:</b> W5 Email, DNS, NAT</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Implement authoritative DNS server (SOA, NS, A, AAAA)</li><li><b>O2.</b> Implement policy engine (subnet, weights, health)</li><li><b>O3.</b> Integrate health checks</li><li><b>O4.</b> Simulate clients from different subnets</li><li><b>O5.</b> Measure convergence time vs. TTL</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Authoritative DNS server</li><li>Policy engine (subnet, weights, health)</li><li>TTL convergence experiments</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; implement authoritative DNS server (SOA, NS, A, AAAA)</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement policy engine (subnet, weights, health)</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Integrate health checks; simulate clients from different subnets</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Measure convergence time vs. TTL</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Authoritative server</li><li>Policy config</li><li>Health monitor</li><li>Query log analytics</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Authoritative vs. recursive DNS</li><li>TTL trade-offs</li><li>Experiment results</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Steering accuracy</li><li>Convergence time vs. TTL</li><li>Queries/s</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 1035</li><li>RFC 7871 (EDNS Client Subnet)</li><li>RFC 2308</li></ul></details>
+</article>
+<article class="card" data-weeks="w1 w4 w6 w7">
+ <header><span class="pid">CP34</span><span class="wk">W1</span><span class="wk">W4</span><span class="wk">W6</span><span class="wk">W7</span><span class="lang">Java + web</span></header>
+ <h3>Remote Lab Automation Platform</h3>
+ <p class="ro">Platformă de automatizare a laboratorului de rețele</p>
+ <p><b>Abstract.</b> A web platform that dispatches network experiments (ping, iperf3, captures) to agent machines over an authenticated TLS channel and collects results.</p>
+ <p><b>Motivation and problem.</b> Network experiments are tedious to repeat by hand; a controller/agent platform makes them reproducible and is directly reusable in the course labs.</p>
+ <p class="meta"><b>Course foundation:</b> W1 Networks, edge &amp; core, delay; W4 Cookies, caching, HTTPS, SSH, FTP; W6 Transport layer, TCP/UDP; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design agent protocol with mutual TLS</li><li><b>O2.</b> Implement job scheduling and result upload</li><li><b>O3.</b> Implement web UI with sessions</li><li><b>O4.</b> Implement experiment templates</li><li><b>O5.</b> Run multi-agent experiments</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Controller–agent protocol with mutual TLS</li><li>Job scheduling and result collection</li><li>Web UI with experiment templates</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design agent protocol with mutual TLS</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement job scheduling and result upload</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Implement web UI with sessions; implement experiment templates</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Run multi-agent experiments</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Controller web app</li><li>Agents</li><li>Experiment templates</li><li>Results visualization</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Architecture and security</li><li>Example experiments</li><li>Scalability</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Experiment reproducibility</li><li>Agents supported</li><li>Job dispatch latency</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 8446</li><li>RFC 9110</li><li>Ansible/SaltStack architecture documentation</li></ul></details>
+</article>
+<article class="card" data-weeks="w2 w5 w6">
+ <header><span class="pid">CP35</span><span class="wk">W2</span><span class="wk">W5</span><span class="wk">W6</span><span class="lang">Python/Java + lab</span></header>
+ <h3>Covert-Channel and Protocol Anomaly Research Study</h3>
+ <p class="ro">Studiu privind canalele ascunse în DNS și detecția lor</p>
+ <p><b>Abstract.</b> A research project in an isolated lab: implement a DNS tunnelling proof-of-concept and a detector based on query entropy, length and frequency, evaluating detection accuracy.</p>
+ <p><b>Motivation and problem.</b> DNS tunnelling is used to evade controls; understanding and detecting it is a relevant defensive security topic, studied strictly in an isolated lab.</p>
+ <p class="meta"><b>Course foundation:</b> W2 Layering, queueing, packet analysis; W5 Email, DNS, NAT; W6 Transport layer, TCP/UDP</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Isolated lab with own DNS server</li><li><b>O2.</b> Implement data encoding in DNS queries (own domain only)</li><li><b>O3.</b> Collect normal and tunnelled traffic</li><li><b>O4.</b> Design detection features and classifier</li><li><b>O5.</b> Evaluate precision/recall</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Proof-of-concept limited to own domain and lab</li><li>Labelled traffic dataset</li><li>Feature-based detector with evaluation</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; isolated lab with own DNS server</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement data encoding in DNS queries (own domain only)</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Collect normal and tunnelled traffic; design detection features and classifier</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>Evaluate precision/recall</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>Encoder/decoder PoC (lab only)</li><li>Detector tool</li><li>Dataset</li><li>Evaluation scripts</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Ethics and isolation statement</li><li>Detection methodology</li><li>Results and defences</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Precision and recall</li><li>Detection delay</li><li>Feature importance</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>RFC 1035</li><li>Farnham &amp; Atlasis, &#x27;Detecting DNS Tunneling&#x27; (SANS, 2013)</li><li>Nadler et al. (2019)</li></ul></details>
+</article>
+<article class="card" data-weeks="w1 w2 w3 w4 w5 w6 w7">
+ <header><span class="pid">CP36</span><span class="wk">W1</span><span class="wk">W2</span><span class="wk">W3</span><span class="wk">W4</span><span class="wk">W5</span><span class="wk">W6</span><span class="wk">W7</span><span class="lang">Java</span></header>
+ <h3>Complete Course Protocol Suite Demonstrator</h3>
+ <p class="ro">Aplicație demonstrativă integrată pentru protocoalele studiate la Rețele de calculatoare</p>
+ <p><b>Abstract.</b> An integrated educational application with modules for each week: delay calculator, encapsulation viewer, HTTP client, DNS client, SMTP sender, TCP state visualizer and socket playground, with quizzes.</p>
+ <p><b>Motivation and problem.</b> An integrated educational tool covering all seven weeks combines the course topics and can become a teaching aid for future students.</p>
+ <p class="meta"><b>Course foundation:</b> W1 Networks, edge &amp; core, delay; W2 Layering, queueing, packet analysis; W3 Web, HTTP, sockets in C; W4 Cookies, caching, HTTPS, SSH, FTP; W5 Email, DNS, NAT; W6 Transport layer, TCP/UDP; W7 Socket programming in Java</p>
+ <details open><summary>Objectives</summary><ul class="plain"><li><b>O1.</b> Design modular GUI architecture</li><li><b>O2.</b> Implement one functional module per week</li><li><b>O3.</b> Integrate packet capture viewer for live examples</li><li><b>O4.</b> Add quizzes based on seminar problems</li><li><b>O5.</b> User testing with colleagues</li></ul></details>
+ <details open><summary>Expected personal contributions</summary><ul><li>Modular application covering Weeks 1–7</li><li>Live networking demonstrations</li><li>Quiz engine and user study</li></ul></details>
+ <details open><summary>Work plan by stage</summary><table class="plan"><tr><th>Stage</th><th>Period</th><th>Activities and milestone</th></tr><tr><td>Stage 1</td><td>Oct–Nov</td><td>Topic assignment and approval of the topic sheet (fișa temei); literature and standards review; design modular GUI architecture</td></tr><tr><td>Stage 2</td><td>Dec–Jan</td><td>Implement one functional module per week</td></tr><tr><td>Stage 3</td><td>Feb–Mar</td><td>Integrate packet capture viewer for live examples; add quizzes based on seminar problems</td></tr><tr><td>Stage 4</td><td>Apr–May</td><td>User testing with colleagues</td></tr><tr><td>Stage 5</td><td>May–Jun</td><td>Thesis writing, similarity check, submission, slides and defence</td></tr></table></details>
+ <details open><summary>Deliverable 1: Application (software)</summary><ul><li>7 modules with live networking</li><li>Quiz engine with scoring</li><li>Built-in explanations</li><li>Installer</li></ul><p class="note">Plus the standard application package (section 3).</p></details>
+ <details open><summary>Deliverable 2: Thesis (Word document)</summary><p class="note">Standard structure (section 3) with these project-specific chapters and content:</p><ul><li>Pedagogical design</li><li>Module-by-module technical description</li><li>User testing results</li></ul></details>
+ <details open><summary>Evaluation metrics</summary><ul><li>Functional coverage of course topics</li><li>User-study learning gain</li><li>Usability score (SUS)</li></ul></details>
+ <details><summary>Starting bibliography</summary><ul><li>Kurose &amp; Ross, &#x27;Computer Networking&#x27; (8th ed.)</li><li>Tanenbaum, &#x27;Computer Networks&#x27;</li><li>Course materials Weeks 1–7</li></ul></details>
+</article></div>
+</div>
+<script>
+const q=document.getElementById('q'),week=document.getElementById('week'),cnt=document.getElementById('count');
+const cards=[...document.querySelectorAll('.card')];
+function f(){const s=q.value.trim().toLowerCase();let n=0;cards.forEach(c=>{
+ const ok=(!week.value||c.dataset.weeks.split(' ').includes(week.value))&&(!s||c.textContent.toLowerCase().includes(s));
+ c.classList.toggle('hidden',!ok);if(ok)n++;});cnt.textContent=n+' of 36 proposals';}
+[q,week].forEach(x=>x.addEventListener('input',f));f();
+let open=true;document.getElementById('tog').onclick=ev=>{open=!open;document.querySelectorAll('.card details').forEach(d=>d.open=open);ev.target.textContent=open?'Collapse details':'Expand details';};
+</script></body></html>

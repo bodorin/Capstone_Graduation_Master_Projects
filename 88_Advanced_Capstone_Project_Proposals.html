@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Advanced Capstone Project Proposals — N. Popescu-Bodorin</title>
+<style>
+:root{--ink:#1d2330;--muted:#5d6675;--line:#e3e6ec;--bg:#fafaf7;--acc:#1f4e79;--card:#fff}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 Georgia,"Times New Roman",serif;color:var(--ink);background:var(--bg)}
+header{background:var(--acc);color:#fff;padding:36px 6vw 28px}header h1{margin:0 0 6px;font-size:30px}
+header p{margin:4px 0;opacity:.9;font-family:system-ui,sans-serif;font-size:14px}
+main{padding:24px 6vw 60px;max-width:1300px;margin:auto}
+h2{border-bottom:2px solid var(--acc);padding-bottom:4px;margin-top:40px;color:var(--acc)}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0}.stat{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 18px;font-family:system-ui,sans-serif}
+.stat b{display:block;font-size:26px;color:var(--acc)}
+.box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:6px;padding:14px 20px;margin:14px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}td,th{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
+th{background:#eef2f7;font-family:system-ui,sans-serif}.c{text-align:center}.muted{color:var(--muted)}
+.controls{position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5;border-bottom:1px solid var(--line);font-family:system-ui,sans-serif}
+.controls button{border:1px solid var(--line);background:#fff;border-radius:16px;padding:5px 11px;margin:3px;cursor:pointer;font-size:13px}
+.controls button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.controls input{padding:6px 10px;border:1px solid var(--line);border-radius:6px;width:260px;margin:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:14px;margin-top:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 18px}
+.card h3{margin:8px 0;font-size:17px}.card p{margin:6px 0;font-size:14px}
+.cardhead{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:system-ui,sans-serif;font-size:11.5px}
+.num{font-weight:700;color:var(--acc)}.tag,.lvl{padding:2px 8px;border-radius:10px;background:#eef2f7}
+.lM{background:#fdecd8}.lL{background:#e1f2e4}
+.refs a{text-decoration:none;color:var(--acc);margin-right:3px}
+#count{font-weight:600;margin-left:8px}
+footer{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);padding:20px 6vw;border-top:1px solid var(--line)}
+@media print{.controls{display:none}.grid{display:block}.card{break-inside:avoid;margin-bottom:10px}}
+</style></head><body>
+<header>
+<h1>Advanced Capstone (Graduation & Master) Project Proposals</h1>
+<p>Supervisor: Assoc. Prof. PhD. Nicolaie Popescu-Bodorin (2022-2026)<!--, Head of the C4 RAICLES Lab-->.</p>
+<!--<p>Derived from the author's publication record · Prepared 16 November 2026 · Private working copy</p>-->
+</header>
+<main>
+<div class="stats">
+<div class="stat"><b>44</b>accessible publications</div>
+<div class="stat"><b>88</b>capstone proposals (2 × 44)</div>
+<div class="stat"><b>64</b>Master's level (Cycle II)</div>
+<div class="stat"><b>24</b>advanced diploma-project level (Cycle I)</div>
+<div class="stat"><b>10</b>research themes</div>
+</div>
+
+<h2>1. What an "advanced capstone project" means in the Romanian state university system</h2>
+<div class="box">
+<p>Romanian law and regulations don't use the term <i>capstone</i>. Under the Bologna structure (Law 199/2023 on higher education), the equivalent is the <b>graduation work</b> (<i>lucrarea de finalizare a studiilor</i>), which a student defends in the final exam (<i>examen de finalizare a studiilor</i>):</p>
+<ul>
+<li><b>Cycle I (licență), 3–4 years.</b> Students write a <i>lucrare de licență</i>. In engineering programmes it is a <i>proiect de diplomă</i> and leads to the engineer's diploma.</li>
+<li><b>Cycle II (master), 1–2 years.</b> Students write a <i>lucrare de disertație</i> (master's dissertation). This is the <b>advanced</b> capstone: it should contain original research or a significant applied innovation.</li>
+</ul>
+<p>The national framework is <b>Ministry of Education Order no. 3691/2024</b>, amended by <b>Order no. 7843/2024</b>. Each university applies its own regulation under it, starting with the 2025–2026 academic year. Key rules:</p>
+<ul>
+<li>The licență/diplomă exam has two parts: (a) an assessment of fundamental and specialty knowledge and (b) a public presentation and defence of the thesis or diploma project.</li>
+<li>The dissertation exam consists of the public presentation and defence of the dissertation.</li>
+<li>Defences are held in person. Online defence is allowed only during an alert, necessity or emergency state, and must be fully recorded and archived.</li>
+<li>Before the defence, the work goes through a similarity (anti-plagiarism) check with a nationally recognised program. The reports go into the exam file, and each university sets its maximum similarity threshold. The supervisor must check that the work meets the standards of original scholarly work.</li>
+<li>Grades are whole numbers from 1 to 10. Each part needs at least 5.00 and the overall average at least 6.00.</li>
+<li>Universities publish the proposed topics and bibliography on their website.</li>
+</ul>
+<p><b>How these proposals are pitched.</b> Every proposal is scoped as a <b>Master's dissertation (Cycle II)</b> or as an <b>advanced final-year diploma project (Cycle I)</b> that is research-flavoured and engineering-heavy. Each one needs a working artefact (code, prototype, dataset or model), a rigorous evaluation and a written thesis, and can be defended in public. Many are designed to produce a conference or journal paper.</p>
+</div>
+
+<h2>2. Publication inventory (basis for the proposals)</h2>
+<div class="box">
+<p><b>Count: 44 accessible publications.</b> These are the 42 journal articles, conference papers, book chapters and technical reports, plus the 2 books, listed on <a href="https://lmrec.org/bodorin/" target="_blank" rel="noopener">lmrec.org/bodorin</a>.</p>
+<!--<p>Other sources: arXiv and DBLP index preprints of items [15] and [30], and WSEAS hosts the full text of [23]. These are copies of works already on the list, not new publications.</p>-->
+<!--<p>Not checked: Google Scholar, Scopus, ORCID and DBLP author pages couldn't be reached from the environment that prepared this document, so any items that appear only there aren't counted.</p>
+<p>Not counted: the 2011 essay "Computing with tangled words" and the keynote talks.</p>
+-->
+<p>The last column of the table shows how many proposals build on each publication. Every publication is used at least once.</p>
+</div>
+<table><thead><tr><th>#</th><th>Year</th><th>Publication</th><th>Links</th><th>Proposals</th></tr></thead><tbody>
+<tr id="pub-1"><td>1</td><td>2026</td><td><b>Neuro-Bayesian-Symbolic Residual Attention Shallow Network: Explainable Deep Learning for Cybersecurity Risk Assessment</b> — with M. Togher<br><span class="muted">ICCCC/CCC 2026</span></td><td>—</td><td class="c">9</td></tr><tr id="pub-2"><td>2</td><td>2026</td><td><b>Privacy Risk Profiling in Claude Code-Based LLM Access Architectures - A Systematic Analysis</b> — with J. L. De Miranda, M. Nagy<br><span class="muted">ICCCC/CCC 2026</span></td><td>—</td><td class="c">8</td></tr><tr id="pub-3"><td>3</td><td>2024</td><td><b>Decision Making and Robust Optimization for Information Systems Oriented to Emergency Events</b> — with M. Nagy, J. L. De Miranda<br><span class="muted">IJCCC 19(6)</span></td><td><a href="https://doi.org/10.15837/ijccc.2024.6.6861" target="_blank" rel="noopener">DOI</a></td><td class="c">4</td></tr><tr id="pub-4"><td>4</td><td>2024</td><td><b>A ten time smaller version of CPC global daily precipitation dataset for parallel distributed processing in Matlab and R</b> — with A. Barbulescu<br><span class="muted">Romanian Reports in Physics 76, 703</span></td><td><a href="https://doi.org/10.59277/RomRepPhys.2024.76.703" target="_blank" rel="noopener">DOI</a></td><td class="c">6</td></tr><tr id="pub-5"><td>5</td><td>2023</td><td><b>A new way of controlling traffic jams inside a Smart City based on IoT devices</b> — with M. Nagy<br><span class="muted">Springer AISC 1435</span></td><td><a href="https://doi.org/10.1007/978-3-031-16684-6_6" target="_blank" rel="noopener">DOI</a></td><td class="c">6</td></tr><tr id="pub-6"><td>6</td><td>2022</td><td><b>Dismounting the so-called Condorcet Drivers Paradox</b> — with M. Nagy, A. Barbulescu<br><span class="muted">Procedia Computer Science 214</span></td><td><a href="https://doi.org/10.1016/j.procs.2022.11.280" target="_blank" rel="noopener">DOI</a></td><td class="c">3</td></tr><tr id="pub-7"><td>7</td><td>2022</td><td><b>On the aerosol optical depth series in the Arabian Gulf region</b> — with A. Barbulescu, C.-S. Dumitriu<br><span class="muted">Romanian Journal of Physics 67(9-10)</span></td><td>—</td><td class="c">2</td></tr><tr id="pub-8"><td>8</td><td>2022</td><td><b>Assessing Atmospheric Pollution and Its Impact on the Human Health</b> — with A. Barbulescu, C.-S. Dumitriu<br><span class="muted">Atmosphere 13(6), 938</span></td><td>—</td><td class="c">3</td></tr><tr id="pub-9"><td>9</td><td>2019</td><td><b>Assessing the history-based predictability of regional monthly precipitation data using statistical and fuzzy methods</b> — with A. Barbulescu<br><span class="muted">Stoch. Environ. Res. Risk Assess. 33</span></td><td><a href="https://doi.org/10.1007/s00477-019-01702-1" target="_blank" rel="noopener">DOI</a></td><td class="c">5</td></tr><tr id="pub-10"><td>10</td><td>2016</td><td><b>Best Practices in Reporting Iris Recognition Results</b> — with V. E. Balas<br><span class="muted">Springer AISC 357</span></td><td>—</td><td class="c">4</td></tr><tr id="pub-11"><td>11</td><td>2016</td><td><b>Circular Fuzzy Iris Segmentation Using Isolines, Sine Law &amp; Lookup Tables</b> — with V. E. Balas, P. S. Penariu<br><span class="muted">SOFA 2016</span></td><td>—</td><td class="c">3</td></tr><tr id="pub-12"><td>12</td><td>2016</td><td><b>A Parallel Approach on Airport Runways Detection Using MPI &amp; CImg</b> — with P. S. Penariu, V. C. Stroescu<br><span class="muted">SOFA 2016</span></td><td>—</td><td class="c">8</td></tr><tr id="pub-13"><td>13</td><td>2015</td><td><b>Iris Recognition with 4 or 5 Fuzzy Sets</b> — with C. M. Noaica, P. S. Penariu<br><span class="muted">IFSA-EUSFLAT 2015</span></td><td><a href="https://doi.org/10.2991/ifsa-eusflat-15.2015.204" target="_blank" rel="noopener">DOI</a></td><td class="c">3</td></tr><tr id="pub-14"><td>14</td><td>2014</td><td><b>Fuzzy Membership, Possibility, Probability and Negation in Biometrics</b> — with V. E. Balas<br><span class="muted">Acta Polytechnica Hungarica 11(4)</span></td><td>—</td><td class="c">5</td></tr><tr id="pub-15"><td>15</td><td>2013</td><td><b>Cross-Sensor Iris Recognition: LG4000-to-LG2200 Comparison (Tech. Rep. 460)</b> — with the ACSTL team<br><span class="muted">Technical report; arXiv:1801.01695</span></td><td><a href="https://arxiv.org/abs/1801.01695" target="_blank" rel="noopener">Open access</a></td><td class="c">2</td></tr><tr id="pub-16"><td>16</td><td>2012</td><td><b>The Biometric Menagerie: A Fuzzy and Inconsistent Concept</b> — with V. E. Balas, I. M. Motoc<br><span class="muted">Springer AISC 195</span></td><td><a href="https://doi.org/10.1007/978-3-642-33941-7_6" target="_blank" rel="noopener">DOI</a></td><td class="c">3</td></tr><tr id="pub-17"><td>17</td><td>2012</td><td><b>Examples of Artificial Perceptions in Optical Character Recognition and Iris Recognition</b> — with C. M. Noaica et al.<br><span class="muted">Springer AISC 195</span></td><td><a href="https://doi.org/10.1007/978-3-642-33941-7_8" target="_blank" rel="noopener">DOI</a></td><td class="c">3</td></tr><tr id="pub-18"><td>18</td><td>2012</td><td><b>Learning Iris Biometric Digital Identities for Secure Authentication</b> — with V. E. Balas<br><span class="muted">Springer SCI 378 (book chapter)</span></td><td><a href="https://doi.org/10.1007/978-3-642-23229-9_19" target="_blank" rel="noopener">DOI</a></td><td class="c">6</td></tr><tr id="pub-19"><td>19</td><td>2011</td><td><b>Iris Codes Classification Using Discriminant and Witness Directions</b> — with V. E. Balas, I. M. Motoc<br><span class="muted">ISCIII 2011</span></td><td><a href="https://doi.org/10.1109/ISCIII.2011.6069760" target="_blank" rel="noopener">DOI</a></td><td class="c">2</td></tr><tr id="pub-20"><td>20</td><td>2011</td><td><b>8-Valent Fuzzy Logic for Iris Recognition and Biometry</b> — with V. E. Balas, I. M. Motoc<br><span class="muted">ISCIII 2011</span></td><td><a href="https://doi.org/10.1109/ISCIII.2011.6069761" target="_blank" rel="noopener">DOI</a></td><td class="c">2</td></tr><tr id="pub-21"><td>21</td><td>2011</td><td><b>Exploratory Simulation of an Intelligent Iris Verifier Distributed System</b> — with V. E. Balas<br><span class="muted">SACI 2011</span></td><td><a href="https://doi.org/10.1109/SACI.2011.5873010" target="_blank" rel="noopener">DOI</a></td><td class="c">2</td></tr><tr id="pub-22"><td>22</td><td>2010</td><td><b>Comparing Haar-Hilbert and Log-Gabor based iris encoders on Bath Iris Image Database</b> — with V. E. Balas<br><span class="muted">SOFA 2010</span></td><td><a href="https://doi.org/10.1109/SOFA.2010.5565599" target="_blank" rel="noopener">DOI</a></td><td class="c">3</td></tr><tr id="pub-23"><td>23</td><td>2010</td><td><b>AI Challenges in Iris Recognition. Processing Tools for Bath Iris Image Database</b> — with V. E. Balas<br><span class="muted">ICAI&#x27;10 (WSEAS)</span></td><td><a href="https://www.wseas.us/e-library/conferences/2010/Iasi/ICAI/ICAI-19.pdf" target="_blank" rel="noopener">Open access</a></td><td class="c">3</td></tr><tr id="pub-24"><td>24</td><td>2010</td><td><b>Automatic Detection of Common Long-Term Monetary Policies on Global Exchange Market Using Gabor Analytic Phase Binary Encoder</b><br><span class="muted">Ovidius Univ. Annals, Economic Sciences X(1)</span></td><td>—</td><td class="c">3</td></tr><tr id="pub-25"><td>25</td><td>2010</td><td><b>From Cognitive Binary Logic to Cognitive Intelligent Agents</b> — with V. E. Balas<br><span class="muted">INES 2010</span></td><td><a href="https://doi.org/10.1109/INES.2010.5483820" target="_blank" rel="noopener">DOI</a></td><td class="c">5</td></tr><tr id="pub-26"><td>26</td><td>2010</td><td><b>Cognitive Binary Logic - The Natural Unified Formal Theory of Propositional Binary Logic</b> — with L. State<br><span class="muted">ICCI 2010</span></td><td>—</td><td class="c">7</td></tr><tr id="pub-27"><td>27</td><td>2010</td><td><b>&#x27;Fragile Bits&#x27; vs. Multi-Enrollment - A Case Study of Iris Recognition on Bath University Iris Database</b><br><span class="muted">ROMAI Journal 5(2)</span></td><td>—</td><td class="c">3</td></tr><tr id="pub-28"><td>28</td><td>2010</td><td><b>Blood corpuscles classification schemes for automated diagnosis of hepatitis using ISODATA algorithm and Run Length Encoding</b> — with L. State, I. Paraschiv-Munteanu<br><span class="muted">Scientific Bulletin, Univ. of Pitesti 16</span></td><td>—</td><td class="c">2</td></tr><tr id="pub-29"><td>29</td><td>2009</td><td><b>A Fuzzy View on k-Means Based Signal Quantization with Application in Iris Segmentation</b><br><span class="muted">Technical report, Spiru Haret University</span></td><td>—</td><td class="c">1</td></tr><tr id="pub-30"><td>30</td><td>2009</td><td><b>Exploring New Directions in Iris Recognition</b><br><span class="muted">SYNASC 2009; arXiv:1107.2696</span></td><td><a href="https://doi.org/10.1109/SYNASC.2009.45" target="_blank" rel="noopener">DOI</a> · <a href="https://arxiv.org/abs/1107.2696" target="_blank" rel="noopener">Open access</a></td><td class="c">3</td></tr><tr id="pub-31"><td>31</td><td>2009</td><td><b>Gabor Analytic Iris Texture Binary Encoder</b><br><span class="muted">SEERC DSC 2009</span></td><td>—</td><td class="c">6</td></tr><tr id="pub-32"><td>32</td><td>2009</td><td><b>Circular Fuzzy Iris Segmentation</b><br><span class="muted">SEERC DSC 2009</span></td><td>—</td><td class="c">2</td></tr><tr id="pub-33"><td>33</td><td>2009</td><td><b>Fast Fuzzy Iris Segmentation</b><br><span class="muted">Ovidius Univ. Annals, Civil Eng., Special Issue 11</span></td><td>—</td><td class="c">2</td></tr><tr id="pub-34"><td>34</td><td>2008</td><td><b>Blood corpuscles classification schemes for automated diagnosis of hepatitis</b> — with L. State, I. Paraschiv-Munteanu<br><span class="muted">Scientific Bulletin, Univ. of Pitesti 14</span></td><td>—</td><td class="c">1</td></tr><tr id="pub-35"><td>35</td><td>2008</td><td><b>Fast K-Means Image Quantization Algorithm and Its Application to Iris Segmentation</b><br><span class="muted">Scientific Bulletin, Univ. of Pitesti 14</span></td><td>—</td><td class="c">6</td></tr><tr id="pub-36"><td>36</td><td>2008</td><td><b>Lossless DCT-Based Compression for Single-Component Continuous-Tone Still Images</b><br><span class="muted">Scientific Bulletin, Univ. of Pitesti 13</span></td><td>—</td><td class="c">2</td></tr><tr id="pub-37"><td>37</td><td>2008</td><td><b>Optimal Luminance-Chrominance Downsampling through Fast K-Means Quantization</b> — with L. State<br><span class="muted">SEERC DSC 2008</span></td><td>—</td><td class="c">2</td></tr><tr id="pub-38"><td>38</td><td>2008</td><td><b>Bit Reversal through Direct Fourier Permutation Method and Vectorial Digit Reversal Generalization</b><br><span class="muted">ROMAI Journal 4(1)</span></td><td>—</td><td class="c">3</td></tr><tr id="pub-39"><td>39</td><td>2007</td><td><b>Efficient (Implicit) Bit Reversal Ordering through Direct Fourier Permutation Method</b><br><span class="muted">Scientific Bulletin, Univ. of Pitesti 12</span></td><td>—</td><td class="c">1</td></tr><tr id="pub-40"><td>40</td><td>≤2007</td><td><b>Stochastic Hamiltonians Associated with Stochastic Differential Equations and Non-Smooth Final Value</b> — with C. Vârsan<br><span class="muted">Mathematical Reports (IMAR) 5(4)</span></td><td>—</td><td class="c">2</td></tr><tr id="pub-41"><td>41</td><td>≤2007</td><td><b>Implicit moments matching through Krylov subspaces projections methods. Lanczos methods</b><br><span class="muted">Scientific Bulletin, Series A 64(3)</span></td><td>—</td><td class="c">3</td></tr><tr id="pub-42"><td>42</td><td>≤2007</td><td><b>Implicit moments matching through Krylov subspaces projections methods. Arnoldi methods</b><br><span class="muted">Scientific Bulletin, Series A 64(2)</span></td><td>—</td><td class="c">2</td></tr><tr id="pub-B1"><td>B1</td><td>2013</td><td><b>Signal Processing Methodologies: A new approach to iris recognition (book)</b><br><span class="muted">Pegasus Press, ISBN 978-973-8971-34-9</span></td><td>—</td><td class="c">3</td></tr><tr id="pub-B2"><td>B2</td><td>2004/2009</td><td><b>Informatica manageriala (book)</b> — with Gherasim, Andronie<br><span class="muted">ISBN 978-973-163-426-5</span></td><td>—</td><td class="c">1</td></tr>
+</tbody></table>
+
+<h2>3. Proposals (88)</h2>
+<div class="controls">
+<input id="q" placeholder="Search titles, methods, tools…">
+<button data-l="all" class="on">All levels</button><button data-l="M">Master's</button><button data-l="L+">Advanced diploma</button><br>
+<button data-f="all" class="on">All themes</button><button data-f="A">Iris biometrics &amp; biometric evaluation <small>(19)</small></button><button data-f="B">Fuzzy logic, uncertainty &amp; soft computing <small>(8)</small></button><button data-f="C">Computational logic, cognitive agents &amp; neuro-symbolic AI <small>(8)</small></button><button data-f="D">LLMs, cybersecurity, privacy &amp; explainable AI <small>(11)</small></button><button data-f="E">Decision making, optimization, smart cities &amp; IoT <small>(9)</small></button><button data-f="F">Climate, precipitation &amp; air-quality data science <small>(9)</small></button><button data-f="G">Image &amp; signal processing, compression, fast transforms <small>(9)</small></button><button data-f="H">Parallel, distributed &amp; high-performance computing <small>(5)</small></button><button data-f="I">Medical &amp; financial signal analytics <small>(5)</small></button><button data-f="J">Numerical &amp; stochastic modelling (Krylov, SDEs, reduced-order models) <small>(5)</small></button>
+<span id="count"></span>
+</div>
+<div class="grid" id="grid">
+<article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-01</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Deep-vs-classical iris encoders: re-running Haar-Hilbert, Log-Gabor and GAITBE against CNN/ViT embeddings</h3>
+<p><b>Aim.</b> Benchmark the classical phase-based encoders from the author&#x27;s work against modern learned embeddings on the same protocols.</p>
+<p><b>Methods &amp; tools.</b> Python, PyTorch, OpenCV; CASIA-Iris / ND-IRIS-0405 / UBIRIS; ROC, DET, EER, d′ with confidence intervals.</p>
+<p><b>Expected deliverables.</b> Reproducible benchmark repo, comparative report, ablation on segmentation quality.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-22" class="ref" title="Comparing Haar-Hilbert and Log-Gabor based iris encoders on Bath Iris Image Database">[22]</a> <a href="#pub-31" class="ref" title="Gabor Analytic Iris Texture Binary Encoder">[31]</a> <a href="#pub-30" class="ref" title="Exploring New Directions in Iris Recognition">[30]</a> <a href="#pub-B1" class="ref" title="Signal Processing Methodologies: A new approach to iris recognition (book)">[B1]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-02</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Cross-sensor iris recognition with domain adaptation</h3>
+<p><b>Aim.</b> Reduce the LG4000-to-LG2200 style performance drop using domain-adversarial training and sensor-specific normalisation.</p>
+<p><b>Methods &amp; tools.</b> DANN / CORAL, histogram matching, ND-CrossSensor-Iris-2013; per-sensor score calibration.</p>
+<p><b>Expected deliverables.</b> Cross-sensor model, calibration study, comparison with the 2013 ACSTL baseline.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-15" class="ref" title="Cross-Sensor Iris Recognition: LG4000-to-LG2200 Comparison (Tech. Rep. 460)">[15]</a> <a href="#pub-27" class="ref" title="&#x27;Fragile Bits&#x27; vs. Multi-Enrollment - A Case Study of Iris Recognition on Bath University Iris Database">[27]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-03</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Neural circular fuzzy iris segmentation: a hybrid of CFIS and U-Net</h3>
+<p><b>Aim.</b> Use the circular fuzzy segmentation as a geometric prior or loss term for a lightweight segmentation network.</p>
+<p><b>Methods &amp; tools.</b> U-Net / DeepLabv3-Mobile; IoU, Hausdorff distance; isoline + sine-law priors.</p>
+<p><b>Expected deliverables.</b> Hybrid segmenter, runtime vs accuracy study, open-source code.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-11" class="ref" title="Circular Fuzzy Iris Segmentation Using Isolines, Sine Law &amp; Lookup Tables">[11]</a> <a href="#pub-32" class="ref" title="Circular Fuzzy Iris Segmentation">[32]</a> <a href="#pub-33" class="ref" title="Fast Fuzzy Iris Segmentation">[33]</a></p>
+</article><article class="card" data-theme="A" data-level="L+">
+<div class="cardhead"><span class="num">ACP-04</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Real-time iris segmentation on embedded hardware with lookup tables</h3>
+<p><b>Aim.</b> Port fast fuzzy segmentation with sine-law lookup tables to a Raspberry Pi / Jetson camera pipeline.</p>
+<p><b>Methods &amp; tools.</b> C++/CImg or OpenCV, NEON SIMD, NIR camera module; latency profiling.</p>
+<p><b>Expected deliverables.</b> Working embedded demonstrator and performance report.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-11" class="ref" title="Circular Fuzzy Iris Segmentation Using Isolines, Sine Law &amp; Lookup Tables">[11]</a> <a href="#pub-33" class="ref" title="Fast Fuzzy Iris Segmentation">[33]</a> <a href="#pub-35" class="ref" title="Fast K-Means Image Quantization Algorithm and Its Application to Iris Segmentation">[35]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-05</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Fragile bits vs. multi-enrolment revisited with large-scale data</h3>
+<p><b>Aim.</b> Quantify how fragile-bit masking and multi-enrolment interact on modern databases and learned binary codes.</p>
+<p><b>Methods &amp; tools.</b> Bit-stability statistics, Hamming-distance analysis, CASIA-Iris-Thousand.</p>
+<p><b>Expected deliverables.</b> Statistical study, enrolment policy recommendations.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-27" class="ref" title="&#x27;Fragile Bits&#x27; vs. Multi-Enrollment - A Case Study of Iris Recognition on Bath University Iris Database">[27]</a> <a href="#pub-19" class="ref" title="Iris Codes Classification Using Discriminant and Witness Directions">[19]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-06</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Discriminant and witness directions for deep iris code classification</h3>
+<p><b>Aim.</b> Generalise discriminant/witness directions from binary iris codes to the latent spaces of deep encoders.</p>
+<p><b>Methods &amp; tools.</b> Linear probes, LDA, contrastive learning; interpretability of directions.</p>
+<p><b>Expected deliverables.</b> Method paper draft, comparison with cosine/Hamming matching.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-19" class="ref" title="Iris Codes Classification Using Discriminant and Witness Directions">[19]</a> <a href="#pub-18" class="ref" title="Learning Iris Biometric Digital Identities for Secure Authentication">[18]</a></p>
+</article><article class="card" data-theme="A" data-level="L+">
+<div class="cardhead"><span class="num">ACP-07</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Statistically sound reporting of iris recognition results: a validation toolkit</h3>
+<p><b>Aim.</b> Turn the best-practice recommendations for reporting iris results into an automated evaluation and report generator.</p>
+<p><b>Methods &amp; tools.</b> Python package; bootstrap CIs, ROC/DET, impostor/genuine histograms, ISO/IEC 19795 alignment.</p>
+<p><b>Expected deliverables.</b> pip-installable toolkit with documentation and examples.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-10" class="ref" title="Best Practices in Reporting Iris Recognition Results">[10]</a> <a href="#pub-16" class="ref" title="The Biometric Menagerie: A Fuzzy and Inconsistent Concept">[16]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-08</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>The biometric menagerie under learned embeddings</h3>
+<p><b>Aim.</b> Test whether Doddington zoo categories (goats, lambs, wolves) are stable or inconsistent for modern iris and face models.</p>
+<p><b>Methods &amp; tools.</b> Score-level analysis across models and thresholds; stability metrics.</p>
+<p><b>Expected deliverables.</b> Empirical study confirming or refuting the &#x27;fuzzy and inconsistent&#x27; hypothesis at scale.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-16" class="ref" title="The Biometric Menagerie: A Fuzzy and Inconsistent Concept">[16]</a> <a href="#pub-14" class="ref" title="Fuzzy Membership, Possibility, Probability and Negation in Biometrics">[14]</a></p>
+</article><article class="card" data-theme="A" data-level="L+">
+<div class="cardhead"><span class="num">ACP-09</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Distributed intelligent iris verifier: a microservice implementation</h3>
+<p><b>Aim.</b> Build the distributed verifier explored in simulation as a real containerised service with secure template storage.</p>
+<p><b>Methods &amp; tools.</b> Docker/Kubernetes, gRPC/REST, template encryption, load testing.</p>
+<p><b>Expected deliverables.</b> Deployed prototype, throughput/latency evaluation, security analysis.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-21" class="ref" title="Exploratory Simulation of an Intelligent Iris Verifier Distributed System">[21]</a> <a href="#pub-18" class="ref" title="Learning Iris Biometric Digital Identities for Secure Authentication">[18]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-10</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Cancelable and privacy-preserving iris templates</h3>
+<p><b>Aim.</b> Design revocable iris templates (Bloom filters, random projections, homomorphic matching) and measure the accuracy/privacy trade-off.</p>
+<p><b>Methods &amp; tools.</b> ISO/IEC 24745 criteria; unlinkability and irreversibility metrics.</p>
+<p><b>Expected deliverables.</b> Template protection scheme with security and accuracy evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-18" class="ref" title="Learning Iris Biometric Digital Identities for Secure Authentication">[18]</a> <a href="#pub-31" class="ref" title="Gabor Analytic Iris Texture Binary Encoder">[31]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-11</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Presentation-attack detection for iris: printed, contact-lens and synthetic attacks</h3>
+<p><b>Aim.</b> Develop a PAD module and evaluate it under LivDet-Iris protocols, including GAN-generated irises.</p>
+<p><b>Methods &amp; tools.</b> CNN/texture features (LBP, BSIF), APCER/BPCER.</p>
+<p><b>Expected deliverables.</b> PAD model, cross-dataset generalisation study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-30" class="ref" title="Exploring New Directions in Iris Recognition">[30]</a> <a href="#pub-23" class="ref" title="AI Challenges in Iris Recognition. Processing Tools for Bath Iris Image Database">[23]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-12</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Synthetic iris generation for data-scarce training</h3>
+<p><b>Aim.</b> Generate identity-consistent synthetic irises and test whether they improve recognition and PAD.</p>
+<p><b>Methods &amp; tools.</b> StyleGAN / diffusion models; identity-leakage checks.</p>
+<p><b>Expected deliverables.</b> Synthetic dataset, impact study on downstream recognition.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-23" class="ref" title="AI Challenges in Iris Recognition. Processing Tools for Bath Iris Image Database">[23]</a> <a href="#pub-13" class="ref" title="Iris Recognition with 4 or 5 Fuzzy Sets">[13]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-13</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Visible-light and mobile-phone iris recognition</h3>
+<p><b>Aim.</b> Adapt the encoder pipeline to visible-wavelength, smartphone-captured eyes.</p>
+<p><b>Methods &amp; tools.</b> UBIRIS v2, MICHE; colour-channel analysis, quality assessment.</p>
+<p><b>Expected deliverables.</b> Mobile pipeline prototype (Android) and accuracy report.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-30" class="ref" title="Exploring New Directions in Iris Recognition">[30]</a> <a href="#pub-22" class="ref" title="Comparing Haar-Hilbert and Log-Gabor based iris encoders on Bath Iris Image Database">[22]</a></p>
+</article><article class="card" data-theme="A" data-level="L+">
+<div class="cardhead"><span class="num">ACP-14</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Iris image quality assessment and its effect on decisions</h3>
+<p><b>Aim.</b> Implement and validate an iris quality metric (sharpness, occlusion, dilation) linked to match-score reliability.</p>
+<p><b>Methods &amp; tools.</b> ISO/IEC 29794-6 measures, error-vs-reject curves.</p>
+<p><b>Expected deliverables.</b> Quality-assessment library and evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-17" class="ref" title="Examples of Artificial Perceptions in Optical Character Recognition and Iris Recognition">[17]</a> <a href="#pub-10" class="ref" title="Best Practices in Reporting Iris Recognition Results">[10]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-15</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Artificial perception in OCR and iris recognition: a unified learning framework</h3>
+<p><b>Aim.</b> Revisit &#x27;artificial perceptions&#x27; and build a shared self-supervised backbone for character and iris recognition.</p>
+<p><b>Methods &amp; tools.</b> Self-supervised learning (SimCLR/DINO), transfer evaluation.</p>
+<p><b>Expected deliverables.</b> Shared-backbone model, analysis of transferable features.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-17" class="ref" title="Examples of Artificial Perceptions in Optical Character Recognition and Iris Recognition">[17]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-16</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Iris recognition across eye diseases and ageing</h3>
+<p><b>Aim.</b> Measure how ocular pathologies and template ageing change genuine-score distributions.</p>
+<p><b>Methods &amp; tools.</b> Warsaw-BioBase-Disease-Iris, template-ageing datasets; statistical tests.</p>
+<p><b>Expected deliverables.</b> Robustness study with clinical-awareness recommendations.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-27" class="ref" title="&#x27;Fragile Bits&#x27; vs. Multi-Enrollment - A Case Study of Iris Recognition on Bath University Iris Database">[27]</a> <a href="#pub-10" class="ref" title="Best Practices in Reporting Iris Recognition Results">[10]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-17</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Explainable iris matching: visualising which regions drive a decision</h3>
+<p><b>Aim.</b> Produce human-interpretable explanations of match/non-match decisions for forensic review.</p>
+<p><b>Methods &amp; tools.</b> Grad-CAM, occlusion maps, bit-level attribution for binary codes.</p>
+<p><b>Expected deliverables.</b> XAI module with a user study on examiner trust.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-31" class="ref" title="Gabor Analytic Iris Texture Binary Encoder">[31]</a> <a href="#pub-1" class="ref" title="Neuro-Bayesian-Symbolic Residual Attention Shallow Network: Explainable Deep Learning for Cybersecurity Risk Assessment">[1]</a></p>
+</article><article class="card" data-theme="A" data-level="M">
+<div class="cardhead"><span class="num">ACP-18</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Multimodal biometric fusion: iris + periocular + face</h3>
+<p><b>Aim.</b> Fuse modalities at score and feature level with uncertainty-aware weighting.</p>
+<p><b>Methods &amp; tools.</b> Score normalisation, fuzzy/possibilistic fusion, Bayesian fusion.</p>
+<p><b>Expected deliverables.</b> Fusion framework and comparison of fusion rules.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-18" class="ref" title="Learning Iris Biometric Digital Identities for Secure Authentication">[18]</a> <a href="#pub-14" class="ref" title="Fuzzy Membership, Possibility, Probability and Negation in Biometrics">[14]</a></p>
+</article><article class="card" data-theme="A" data-level="L+">
+<div class="cardhead"><span class="num">ACP-19</span><span class="tag tA">Iris biometrics &amp; biometric evaluation</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Iris recognition competition kit for teaching</h3>
+<p><b>Aim.</b> Recreate the ACSTL cross-sensor competition setting as an automated, Kaggle-style evaluation platform for students.</p>
+<p><b>Methods &amp; tools.</b> Web app (Django/FastAPI), hidden test sets, leaderboard.</p>
+<p><b>Expected deliverables.</b> Hosted competition platform and documentation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-15" class="ref" title="Cross-Sensor Iris Recognition: LG4000-to-LG2200 Comparison (Tech. Rep. 460)">[15]</a> <a href="#pub-23" class="ref" title="AI Challenges in Iris Recognition. Processing Tools for Bath Iris Image Database">[23]</a></p>
+</article><article class="card" data-theme="B" data-level="M">
+<div class="cardhead"><span class="num">ACP-20</span><span class="tag tB">Fuzzy logic, uncertainty &amp; soft computing</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Iris recognition with k fuzzy sets: how many sets are enough?</h3>
+<p><b>Aim.</b> Generalise 4/5-fuzzy-set matching to k sets and learn the partition from data.</p>
+<p><b>Methods &amp; tools.</b> Fuzzy partitioning, optimisation of membership functions, cross-validation.</p>
+<p><b>Expected deliverables.</b> Analysis of k vs. accuracy, decision-rule paper draft.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-13" class="ref" title="Iris Recognition with 4 or 5 Fuzzy Sets">[13]</a> <a href="#pub-20" class="ref" title="8-Valent Fuzzy Logic for Iris Recognition and Biometry">[20]</a></p>
+</article><article class="card" data-theme="B" data-level="M">
+<div class="cardhead"><span class="num">ACP-21</span><span class="tag tB">Fuzzy logic, uncertainty &amp; soft computing</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>8-valent fuzzy logic as a decision layer for multi-class biometric systems</h3>
+<p><b>Aim.</b> Apply the 8-valent fuzzy logic to verification decisions with &#x27;uncertain&#x27; outcomes and reject options.</p>
+<p><b>Methods &amp; tools.</b> Many-valued logic, cost-sensitive decision analysis.</p>
+<p><b>Expected deliverables.</b> Decision layer prototype and cost/benefit study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-20" class="ref" title="8-Valent Fuzzy Logic for Iris Recognition and Biometry">[20]</a> <a href="#pub-14" class="ref" title="Fuzzy Membership, Possibility, Probability and Negation in Biometrics">[14]</a></p>
+</article><article class="card" data-theme="B" data-level="M">
+<div class="cardhead"><span class="num">ACP-22</span><span class="tag tB">Fuzzy logic, uncertainty &amp; soft computing</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Membership, possibility and probability: an empirical comparison in classifier outputs</h3>
+<p><b>Aim.</b> Compare probabilistic calibration with possibilistic and fuzzy interpretations of classifier confidence.</p>
+<p><b>Methods &amp; tools.</b> Temperature scaling, conformal prediction, possibility distributions.</p>
+<p><b>Expected deliverables.</b> Comparative study with guidelines for practitioners.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-14" class="ref" title="Fuzzy Membership, Possibility, Probability and Negation in Biometrics">[14]</a></p>
+</article><article class="card" data-theme="B" data-level="L+">
+<div class="cardhead"><span class="num">ACP-23</span><span class="tag tB">Fuzzy logic, uncertainty &amp; soft computing</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Fuzzy k-means signal quantisation for edge AI</h3>
+<p><b>Aim.</b> Use fuzzy k-means quantisation to compress neural-network weights or activations for microcontrollers.</p>
+<p><b>Methods &amp; tools.</b> TensorFlow Lite Micro, quantisation-aware training.</p>
+<p><b>Expected deliverables.</b> Compressed model on MCU, accuracy/memory trade-off.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-29" class="ref" title="A Fuzzy View on k-Means Based Signal Quantization with Application in Iris Segmentation">[29]</a> <a href="#pub-35" class="ref" title="Fast K-Means Image Quantization Algorithm and Its Application to Iris Segmentation">[35]</a></p>
+</article><article class="card" data-theme="B" data-level="L+">
+<div class="cardhead"><span class="num">ACP-24</span><span class="tag tB">Fuzzy logic, uncertainty &amp; soft computing</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Fuzzy rule-based traffic-light controller</h3>
+<p><b>Aim.</b> Design a fuzzy controller for adaptive traffic lights and compare with fixed-time and RL controllers in simulation.</p>
+<p><b>Methods &amp; tools.</b> SUMO simulator, scikit-fuzzy, RL baseline.</p>
+<p><b>Expected deliverables.</b> Controller, simulation study, deployment design.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-5" class="ref" title="A new way of controlling traffic jams inside a Smart City based on IoT devices">[5]</a> <a href="#pub-13" class="ref" title="Iris Recognition with 4 or 5 Fuzzy Sets">[13]</a></p>
+</article><article class="card" data-theme="B" data-level="M">
+<div class="cardhead"><span class="num">ACP-25</span><span class="tag tB">Fuzzy logic, uncertainty &amp; soft computing</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Fuzzy time-series forecasting of precipitation</h3>
+<p><b>Aim.</b> Extend the statistical and fuzzy predictability analysis with modern fuzzy time-series and neuro-fuzzy models (ANFIS).</p>
+<p><b>Methods &amp; tools.</b> ANFIS, fuzzy time series, LSTM baseline, regional datasets.</p>
+<p><b>Expected deliverables.</b> Forecasting models and predictability maps.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-9" class="ref" title="Assessing the history-based predictability of regional monthly precipitation data using statistical and fuzzy methods">[9]</a> <a href="#pub-4" class="ref" title="A ten time smaller version of CPC global daily precipitation dataset for parallel distributed processing in Matlab and R">[4]</a></p>
+</article><article class="card" data-theme="B" data-level="M">
+<div class="cardhead"><span class="num">ACP-26</span><span class="tag tB">Fuzzy logic, uncertainty &amp; soft computing</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Negation and inconsistency handling in fuzzy biometric reasoning</h3>
+<p><b>Aim.</b> Formalise negation operators for biometric evidence and test their effect on decision consistency.</p>
+<p><b>Methods &amp; tools.</b> Fuzzy negations, t-norms, logical consistency checks.</p>
+<p><b>Expected deliverables.</b> Formal model with experimental validation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-14" class="ref" title="Fuzzy Membership, Possibility, Probability and Negation in Biometrics">[14]</a> <a href="#pub-16" class="ref" title="The Biometric Menagerie: A Fuzzy and Inconsistent Concept">[16]</a></p>
+</article><article class="card" data-theme="B" data-level="M">
+<div class="cardhead"><span class="num">ACP-27</span><span class="tag tB">Fuzzy logic, uncertainty &amp; soft computing</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Type-2 fuzzy iris segmentation under uncertain illumination</h3>
+<p><b>Aim.</b> Replace type-1 memberships in circular fuzzy segmentation with interval type-2 sets.</p>
+<p><b>Methods &amp; tools.</b> Interval type-2 fuzzy logic, noisy-illumination datasets.</p>
+<p><b>Expected deliverables.</b> Segmentation algorithm and robustness benchmark.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-32" class="ref" title="Circular Fuzzy Iris Segmentation">[32]</a> <a href="#pub-11" class="ref" title="Circular Fuzzy Iris Segmentation Using Isolines, Sine Law &amp; Lookup Tables">[11]</a></p>
+</article><article class="card" data-theme="C" data-level="M">
+<div class="cardhead"><span class="num">ACP-28</span><span class="tag tC">Computational logic, cognitive agents &amp; neuro-symbolic AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>An automated theorem checker for Cognitive Binary Logic</h3>
+<p><b>Aim.</b> Implement CBL as a formal system and verify its relationship with classical propositional logic in a proof assistant.</p>
+<p><b>Methods &amp; tools.</b> Lean 4 or Coq; SAT-solver cross-checks.</p>
+<p><b>Expected deliverables.</b> Mechanised formalisation and proof library.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-26" class="ref" title="Cognitive Binary Logic - The Natural Unified Formal Theory of Propositional Binary Logic">[26]</a></p>
+</article><article class="card" data-theme="C" data-level="M">
+<div class="cardhead"><span class="num">ACP-29</span><span class="tag tC">Computational logic, cognitive agents &amp; neuro-symbolic AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Cognitive intelligent agents built on CBL</h3>
+<p><b>Aim.</b> Design a BDI-style agent architecture whose reasoning layer is CBL, and test it in a simulated environment.</p>
+<p><b>Methods &amp; tools.</b> Python/Jason/SPADE, multi-agent simulation.</p>
+<p><b>Expected deliverables.</b> Agent framework and experimental evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-25" class="ref" title="From Cognitive Binary Logic to Cognitive Intelligent Agents">[25]</a> <a href="#pub-26" class="ref" title="Cognitive Binary Logic - The Natural Unified Formal Theory of Propositional Binary Logic">[26]</a></p>
+</article><article class="card" data-theme="C" data-level="M">
+<div class="cardhead"><span class="num">ACP-30</span><span class="tag tC">Computational logic, cognitive agents &amp; neuro-symbolic AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Logic-guided LLM reasoning: checking chain-of-thought with a symbolic verifier</h3>
+<p><b>Aim.</b> Translate LLM reasoning steps to propositional form and verify them with a CBL/SAT back-end.</p>
+<p><b>Methods &amp; tools.</b> LLM APIs, autoformalisation, Z3/PySAT.</p>
+<p><b>Expected deliverables.</b> Verifier pipeline, error-detection study on reasoning benchmarks.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-26" class="ref" title="Cognitive Binary Logic - The Natural Unified Formal Theory of Propositional Binary Logic">[26]</a> <a href="#pub-1" class="ref" title="Neuro-Bayesian-Symbolic Residual Attention Shallow Network: Explainable Deep Learning for Cybersecurity Risk Assessment">[1]</a></p>
+</article><article class="card" data-theme="C" data-level="M">
+<div class="cardhead"><span class="num">ACP-31</span><span class="tag tC">Computational logic, cognitive agents &amp; neuro-symbolic AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Imitating vs. understanding: evaluating LLMs on logic tasks</h3>
+<p><b>Aim.</b> Build a benchmark that separates surface pattern imitation from logical understanding (counterfactual and perturbed problems).</p>
+<p><b>Methods &amp; tools.</b> Benchmark design, controlled perturbations, statistical evaluation.</p>
+<p><b>Expected deliverables.</b> Public benchmark and analysis paper draft.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-26" class="ref" title="Cognitive Binary Logic - The Natural Unified Formal Theory of Propositional Binary Logic">[26]</a> <a href="#pub-2" class="ref" title="Privacy Risk Profiling in Claude Code-Based LLM Access Architectures - A Systematic Analysis">[2]</a></p>
+</article><article class="card" data-theme="C" data-level="M">
+<div class="cardhead"><span class="num">ACP-32</span><span class="tag tC">Computational logic, cognitive agents &amp; neuro-symbolic AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Neuro-symbolic rule extraction from shallow attention networks</h3>
+<p><b>Aim.</b> Extract symbolic rules from trained residual-attention shallow networks and measure fidelity.</p>
+<p><b>Methods &amp; tools.</b> Rule extraction (DeepRED-style), decision trees, fidelity metrics.</p>
+<p><b>Expected deliverables.</b> Rule-extraction tool and fidelity study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-1" class="ref" title="Neuro-Bayesian-Symbolic Residual Attention Shallow Network: Explainable Deep Learning for Cybersecurity Risk Assessment">[1]</a> <a href="#pub-25" class="ref" title="From Cognitive Binary Logic to Cognitive Intelligent Agents">[25]</a></p>
+</article><article class="card" data-theme="C" data-level="L+">
+<div class="cardhead"><span class="num">ACP-33</span><span class="tag tC">Computational logic, cognitive agents &amp; neuro-symbolic AI</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Computing with tangled words: semantic parsing to logic forms</h3>
+<p><b>Aim.</b> Build a small natural-language-to-logic translator for propositional statements with a verification step.</p>
+<p><b>Methods &amp; tools.</b> spaCy/LLM parsing, grammar rules, test suite.</p>
+<p><b>Expected deliverables.</b> Translator prototype with evaluation set.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-26" class="ref" title="Cognitive Binary Logic - The Natural Unified Formal Theory of Propositional Binary Logic">[26]</a></p>
+</article><article class="card" data-theme="C" data-level="L+">
+<div class="cardhead"><span class="num">ACP-34</span><span class="tag tC">Computational logic, cognitive agents &amp; neuro-symbolic AI</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Logic-based tutoring agent for discrete mathematics</h3>
+<p><b>Aim.</b> Create an intelligent tutor that checks student proofs in propositional logic and gives hints.</p>
+<p><b>Methods &amp; tools.</b> Web app, proof checker, hint generation.</p>
+<p><b>Expected deliverables.</b> Deployed tutor and a pilot evaluation with students.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-25" class="ref" title="From Cognitive Binary Logic to Cognitive Intelligent Agents">[25]</a> <a href="#pub-26" class="ref" title="Cognitive Binary Logic - The Natural Unified Formal Theory of Propositional Binary Logic">[26]</a></p>
+</article><article class="card" data-theme="C" data-level="M">
+<div class="cardhead"><span class="num">ACP-35</span><span class="tag tC">Computational logic, cognitive agents &amp; neuro-symbolic AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Multi-agent negotiation with formally verified protocols</h3>
+<p><b>Aim.</b> Model agent negotiation (e.g. resource allocation) and verify protocol properties with model checking.</p>
+<p><b>Methods &amp; tools.</b> SPIN/UPPAAL or TLA+, agent simulation.</p>
+<p><b>Expected deliverables.</b> Verified protocol specification and simulation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-25" class="ref" title="From Cognitive Binary Logic to Cognitive Intelligent Agents">[25]</a> <a href="#pub-6" class="ref" title="Dismounting the so-called Condorcet Drivers Paradox">[6]</a></p>
+</article><article class="card" data-theme="D" data-level="M">
+<div class="cardhead"><span class="num">ACP-36</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Neuro-Bayesian-symbolic risk scoring for SOC alerts</h3>
+<p><b>Aim.</b> Apply the explainable residual-attention architecture to security-operations-centre alert triage.</p>
+<p><b>Methods &amp; tools.</b> PyTorch, Bayesian layers, CIC-IDS / UNSW-NB15, SHAP comparison.</p>
+<p><b>Expected deliverables.</b> Triage model with explanation interface and analyst study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-1" class="ref" title="Neuro-Bayesian-Symbolic Residual Attention Shallow Network: Explainable Deep Learning for Cybersecurity Risk Assessment">[1]</a></p>
+</article><article class="card" data-theme="D" data-level="M">
+<div class="cardhead"><span class="num">ACP-37</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Privacy-risk profiling of LLM coding agents in enterprise settings</h3>
+<p><b>Aim.</b> Extend the systematic analysis of LLM-access architectures into a reusable threat model and audit checklist.</p>
+<p><b>Methods &amp; tools.</b> STRIDE/LINDDUN, data-flow diagrams, configuration audits.</p>
+<p><b>Expected deliverables.</b> Threat model, audit tool and case studies.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-2" class="ref" title="Privacy Risk Profiling in Claude Code-Based LLM Access Architectures - A Systematic Analysis">[2]</a></p>
+</article><article class="card" data-theme="D" data-level="M">
+<div class="cardhead"><span class="num">ACP-38</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Detecting sensitive-data leakage in prompts and tool calls</h3>
+<p><b>Aim.</b> Build a filter that detects secrets, PII and proprietary code before they reach an external LLM.</p>
+<p><b>Methods &amp; tools.</b> NER, regex + ML classifiers, synthetic leakage dataset.</p>
+<p><b>Expected deliverables.</b> Gateway proxy prototype with precision/recall evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-2" class="ref" title="Privacy Risk Profiling in Claude Code-Based LLM Access Architectures - A Systematic Analysis">[2]</a></p>
+</article><article class="card" data-theme="D" data-level="M">
+<div class="cardhead"><span class="num">ACP-39</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Prompt-injection defences for tool-using LLM agents</h3>
+<p><b>Aim.</b> Evaluate defences against indirect prompt injection in agents that read web pages and files.</p>
+<p><b>Methods &amp; tools.</b> Agent frameworks, AgentDojo-style benchmarks, red-teaming.</p>
+<p><b>Expected deliverables.</b> Defence comparison and recommended architecture.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-2" class="ref" title="Privacy Risk Profiling in Claude Code-Based LLM Access Architectures - A Systematic Analysis">[2]</a> <a href="#pub-1" class="ref" title="Neuro-Bayesian-Symbolic Residual Attention Shallow Network: Explainable Deep Learning for Cybersecurity Risk Assessment">[1]</a></p>
+</article><article class="card" data-theme="D" data-level="M">
+<div class="cardhead"><span class="num">ACP-40</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Explainable intrusion detection with uncertainty quantification</h3>
+<p><b>Aim.</b> Combine Bayesian deep learning with symbolic explanations for network intrusion detection.</p>
+<p><b>Methods &amp; tools.</b> MC-dropout, deep ensembles, rule explanations.</p>
+<p><b>Expected deliverables.</b> IDS prototype, calibration and explanation-quality metrics.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-1" class="ref" title="Neuro-Bayesian-Symbolic Residual Attention Shallow Network: Explainable Deep Learning for Cybersecurity Risk Assessment">[1]</a></p>
+</article><article class="card" data-theme="D" data-level="M">
+<div class="cardhead"><span class="num">ACP-41</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Video steganography and steganalysis with deep learning</h3>
+<p><b>Aim.</b> Design a robust video steganography scheme and a matching CNN steganalyser.</p>
+<p><b>Methods &amp; tools.</b> DCT-domain embedding, H.264/H.265, adversarial training.</p>
+<p><b>Expected deliverables.</b> Stego tool, steganalyser and capacity/robustness study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-B1" class="ref" title="Signal Processing Methodologies: A new approach to iris recognition (book)">[B1]</a> <a href="#pub-36" class="ref" title="Lossless DCT-Based Compression for Single-Component Continuous-Tone Still Images">[36]</a></p>
+</article><article class="card" data-theme="D" data-level="L+">
+<div class="cardhead"><span class="num">ACP-42</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Accuracy is not enough: auditing ML metrics on public developer documentation</h3>
+<p><b>Aim.</b> Systematically audit how metrics (accuracy, precision, F1) are defined and misused in popular ML tutorials and docs.</p>
+<p><b>Methods &amp; tools.</b> Document analysis, metric re-computation, imbalanced datasets.</p>
+<p><b>Expected deliverables.</b> Audit report and corrected teaching notebooks.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-10" class="ref" title="Best Practices in Reporting Iris Recognition Results">[10]</a> <a href="#pub-1" class="ref" title="Neuro-Bayesian-Symbolic Residual Attention Shallow Network: Explainable Deep Learning for Cybersecurity Risk Assessment">[1]</a></p>
+</article><article class="card" data-theme="D" data-level="L+">
+<div class="cardhead"><span class="num">ACP-43</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Local, privacy-preserving LLM assistant for a university department</h3>
+<p><b>Aim.</b> Deploy an on-premise LLM with retrieval over departmental documents, with access control and logging.</p>
+<p><b>Methods &amp; tools.</b> Ollama/vLLM, RAG, role-based access.</p>
+<p><b>Expected deliverables.</b> Working assistant and privacy impact assessment.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-2" class="ref" title="Privacy Risk Profiling in Claude Code-Based LLM Access Architectures - A Systematic Analysis">[2]</a></p>
+</article><article class="card" data-theme="D" data-level="M">
+<div class="cardhead"><span class="num">ACP-44</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Membership-inference and model-inversion risks in biometric models</h3>
+<p><b>Aim.</b> Measure how much information about enrolled users leaks from trained biometric models.</p>
+<p><b>Methods &amp; tools.</b> Shadow-model attacks, differential privacy training.</p>
+<p><b>Expected deliverables.</b> Attack study and DP-mitigation results.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-18" class="ref" title="Learning Iris Biometric Digital Identities for Secure Authentication">[18]</a> <a href="#pub-2" class="ref" title="Privacy Risk Profiling in Claude Code-Based LLM Access Architectures - A Systematic Analysis">[2]</a></p>
+</article><article class="card" data-theme="D" data-level="M">
+<div class="cardhead"><span class="num">ACP-45</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Hallucination detection for LLM answers in technical domains</h3>
+<p><b>Aim.</b> Combine logical consistency checks and retrieval verification to flag hallucinated statements.</p>
+<p><b>Methods &amp; tools.</b> Self-consistency, NLI models, retrieval grounding.</p>
+<p><b>Expected deliverables.</b> Detector, labelled evaluation set, error analysis.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-26" class="ref" title="Cognitive Binary Logic - The Natural Unified Formal Theory of Propositional Binary Logic">[26]</a> <a href="#pub-2" class="ref" title="Privacy Risk Profiling in Claude Code-Based LLM Access Architectures - A Systematic Analysis">[2]</a></p>
+</article><article class="card" data-theme="D" data-level="M">
+<div class="cardhead"><span class="num">ACP-46</span><span class="tag tD">LLMs, cybersecurity, privacy &amp; explainable AI</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Federated learning for privacy-preserving biometric training</h3>
+<p><b>Aim.</b> Train recognition models across institutions without sharing raw biometric images.</p>
+<p><b>Methods &amp; tools.</b> Flower/FedML, secure aggregation, non-IID splits.</p>
+<p><b>Expected deliverables.</b> Federated pipeline and accuracy/privacy comparison.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-18" class="ref" title="Learning Iris Biometric Digital Identities for Secure Authentication">[18]</a> <a href="#pub-2" class="ref" title="Privacy Risk Profiling in Claude Code-Based LLM Access Architectures - A Systematic Analysis">[2]</a></p>
+</article><article class="card" data-theme="E" data-level="M">
+<div class="cardhead"><span class="num">ACP-47</span><span class="tag tE">Decision making, optimization, smart cities &amp; IoT</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Robust optimisation for emergency-response resource allocation</h3>
+<p><b>Aim.</b> Implement robust/stochastic optimisation models for allocating ambulances or shelters under uncertainty.</p>
+<p><b>Methods &amp; tools.</b> Pyomo/Gurobi/OR-Tools, uncertainty sets, scenario generation.</p>
+<p><b>Expected deliverables.</b> Optimisation model, case study, sensitivity analysis.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-3" class="ref" title="Decision Making and Robust Optimization for Information Systems Oriented to Emergency Events">[3]</a></p>
+</article><article class="card" data-theme="E" data-level="L+">
+<div class="cardhead"><span class="num">ACP-48</span><span class="tag tE">Decision making, optimization, smart cities &amp; IoT</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Decision-support information system for emergency events</h3>
+<p><b>Aim.</b> Design and build an information system that integrates alerts, resources and robust decisions.</p>
+<p><b>Methods &amp; tools.</b> Web stack, GIS, optimisation back-end.</p>
+<p><b>Expected deliverables.</b> Functional prototype and usability evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-3" class="ref" title="Decision Making and Robust Optimization for Information Systems Oriented to Emergency Events">[3]</a></p>
+</article><article class="card" data-theme="E" data-level="M">
+<div class="cardhead"><span class="num">ACP-49</span><span class="tag tE">Decision making, optimization, smart cities &amp; IoT</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>IoT-based traffic-jam control: from model to city-scale simulation</h3>
+<p><b>Aim.</b> Scale the IoT traffic-control approach to a real city map and compare with adaptive baselines.</p>
+<p><b>Methods &amp; tools.</b> SUMO + OpenStreetMap, MQTT sensor simulation, RL.</p>
+<p><b>Expected deliverables.</b> Simulation study, travel-time and emissions metrics.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-5" class="ref" title="A new way of controlling traffic jams inside a Smart City based on IoT devices">[5]</a></p>
+</article><article class="card" data-theme="E" data-level="L+">
+<div class="cardhead"><span class="num">ACP-50</span><span class="tag tE">Decision making, optimization, smart cities &amp; IoT</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Edge computing architecture for smart-city sensing</h3>
+<p><b>Aim.</b> Design an edge/fog architecture for low-latency traffic sensing and control.</p>
+<p><b>Methods &amp; tools.</b> Raspberry Pi/ESP32, MQTT, Kubernetes at the edge.</p>
+<p><b>Expected deliverables.</b> Hardware prototype and latency analysis.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-5" class="ref" title="A new way of controlling traffic jams inside a Smart City based on IoT devices">[5]</a> <a href="#pub-12" class="ref" title="A Parallel Approach on Airport Runways Detection Using MPI &amp; CImg">[12]</a></p>
+</article><article class="card" data-theme="E" data-level="M">
+<div class="cardhead"><span class="num">ACP-51</span><span class="tag tE">Decision making, optimization, smart cities &amp; IoT</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>The Condorcet drivers paradox: an agent-based study</h3>
+<p><b>Aim.</b> Use agent-based simulation to study route-choice paradoxes and the conditions under which they appear.</p>
+<p><b>Methods &amp; tools.</b> Mesa/NetLogo, game-theoretic analysis, Braess/Condorcet scenarios.</p>
+<p><b>Expected deliverables.</b> Simulation model and formal analysis.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-6" class="ref" title="Dismounting the so-called Condorcet Drivers Paradox">[6]</a></p>
+</article><article class="card" data-theme="E" data-level="M">
+<div class="cardhead"><span class="num">ACP-52</span><span class="tag tE">Decision making, optimization, smart cities &amp; IoT</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Voting rules and collective decision making in multi-agent systems</h3>
+<p><b>Aim.</b> Compare voting rules for aggregating preferences of autonomous agents (e.g. vehicles, drones).</p>
+<p><b>Methods &amp; tools.</b> Computational social choice, simulation.</p>
+<p><b>Expected deliverables.</b> Comparative study and recommendations.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-6" class="ref" title="Dismounting the so-called Condorcet Drivers Paradox">[6]</a> <a href="#pub-25" class="ref" title="From Cognitive Binary Logic to Cognitive Intelligent Agents">[25]</a></p>
+</article><article class="card" data-theme="E" data-level="M">
+<div class="cardhead"><span class="num">ACP-53</span><span class="tag tE">Decision making, optimization, smart cities &amp; IoT</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Digital twin of an urban intersection</h3>
+<p><b>Aim.</b> Build a digital twin fed by cameras/IoT, used to test control strategies before deployment.</p>
+<p><b>Methods &amp; tools.</b> Computer vision counting (YOLO), SUMO, real-time sync.</p>
+<p><b>Expected deliverables.</b> Digital-twin prototype and validation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-5" class="ref" title="A new way of controlling traffic jams inside a Smart City based on IoT devices">[5]</a> <a href="#pub-12" class="ref" title="A Parallel Approach on Airport Runways Detection Using MPI &amp; CImg">[12]</a></p>
+</article><article class="card" data-theme="E" data-level="L+">
+<div class="cardhead"><span class="num">ACP-54</span><span class="tag tE">Decision making, optimization, smart cities &amp; IoT</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Evacuation-route optimisation with real-time data</h3>
+<p><b>Aim.</b> Compute and update evacuation routes as roads close during an emergency.</p>
+<p><b>Methods &amp; tools.</b> Graph algorithms, dynamic shortest paths, web map.</p>
+<p><b>Expected deliverables.</b> Routing service and scenario evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-3" class="ref" title="Decision Making and Robust Optimization for Information Systems Oriented to Emergency Events">[3]</a> <a href="#pub-5" class="ref" title="A new way of controlling traffic jams inside a Smart City based on IoT devices">[5]</a></p>
+</article><article class="card" data-theme="E" data-level="L+">
+<div class="cardhead"><span class="num">ACP-55</span><span class="tag tE">Decision making, optimization, smart cities &amp; IoT</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Management information systems for public institutions: an AI-enabled redesign</h3>
+<p><b>Aim.</b> Re-design a management information system with analytics and decision support, building on managerial informatics principles.</p>
+<p><b>Methods &amp; tools.</b> Requirements analysis, BPMN, database design, BI dashboards.</p>
+<p><b>Expected deliverables.</b> System design, prototype and evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-B2" class="ref" title="Informatica manageriala (book)">[B2]</a> <a href="#pub-3" class="ref" title="Decision Making and Robust Optimization for Information Systems Oriented to Emergency Events">[3]</a></p>
+</article><article class="card" data-theme="F" data-level="M">
+<div class="cardhead"><span class="num">ACP-56</span><span class="tag tF">Climate, precipitation &amp; air-quality data science</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Compressed global precipitation datasets for scalable analytics</h3>
+<p><b>Aim.</b> Generalise the 10x-smaller CPC dataset approach to other global gridded products (ERA5, GPM IMERG).</p>
+<p><b>Methods &amp; tools.</b> Python/xarray, Zarr, Dask; lossless/lossy compression.</p>
+<p><b>Expected deliverables.</b> Compressed datasets, processing benchmarks, open tooling.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-4" class="ref" title="A ten time smaller version of CPC global daily precipitation dataset for parallel distributed processing in Matlab and R">[4]</a></p>
+</article><article class="card" data-theme="F" data-level="M">
+<div class="cardhead"><span class="num">ACP-57</span><span class="tag tF">Climate, precipitation &amp; air-quality data science</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Deep learning precipitation nowcasting on reduced datasets</h3>
+<p><b>Aim.</b> Train ConvLSTM / U-Net nowcasting models and check whether reduced datasets preserve skill.</p>
+<p><b>Methods &amp; tools.</b> PyTorch, CPC/ERA5, CSI and RMSE metrics.</p>
+<p><b>Expected deliverables.</b> Nowcasting model and data-reduction impact study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-4" class="ref" title="A ten time smaller version of CPC global daily precipitation dataset for parallel distributed processing in Matlab and R">[4]</a> <a href="#pub-9" class="ref" title="Assessing the history-based predictability of regional monthly precipitation data using statistical and fuzzy methods">[9]</a></p>
+</article><article class="card" data-theme="F" data-level="M">
+<div class="cardhead"><span class="num">ACP-58</span><span class="tag tF">Climate, precipitation &amp; air-quality data science</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Aerosol optical depth forecasting in arid regions</h3>
+<p><b>Aim.</b> Model AOD series in the Arabian Gulf with statistical and ML models, including dust-event detection.</p>
+<p><b>Methods &amp; tools.</b> MODIS/AERONET data, ARIMA, gradient boosting, LSTM.</p>
+<p><b>Expected deliverables.</b> Forecast models and event-detection evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-7" class="ref" title="On the aerosol optical depth series in the Arabian Gulf region">[7]</a></p>
+</article><article class="card" data-theme="F" data-level="M">
+<div class="cardhead"><span class="num">ACP-59</span><span class="tag tF">Climate, precipitation &amp; air-quality data science</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Air pollution and public health: a causal-inference study</h3>
+<p><b>Aim.</b> Estimate the health impact of pollution levels using causal methods rather than correlations.</p>
+<p><b>Methods &amp; tools.</b> Distributed-lag models, DAGs, doubly-robust estimation.</p>
+<p><b>Expected deliverables.</b> Causal analysis report with policy implications.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-8" class="ref" title="Assessing Atmospheric Pollution and Its Impact on the Human Health">[8]</a></p>
+</article><article class="card" data-theme="F" data-level="L+">
+<div class="cardhead"><span class="num">ACP-60</span><span class="tag tF">Climate, precipitation &amp; air-quality data science</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Low-cost air-quality sensor network with calibration</h3>
+<p><b>Aim.</b> Build a network of low-cost PM sensors and calibrate them against reference stations with ML.</p>
+<p><b>Methods &amp; tools.</b> ESP32 + PM2.5 sensors, LoRaWAN/MQTT, regression calibration.</p>
+<p><b>Expected deliverables.</b> Sensor network, calibration models, public dashboard.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-8" class="ref" title="Assessing Atmospheric Pollution and Its Impact on the Human Health">[8]</a> <a href="#pub-5" class="ref" title="A new way of controlling traffic jams inside a Smart City based on IoT devices">[5]</a></p>
+</article><article class="card" data-theme="F" data-level="M">
+<div class="cardhead"><span class="num">ACP-61</span><span class="tag tF">Climate, precipitation &amp; air-quality data science</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Predictability of regional precipitation: entropy and complexity measures</h3>
+<p><b>Aim.</b> Extend history-based predictability with permutation entropy, Hurst exponent and recurrence analysis.</p>
+<p><b>Methods &amp; tools.</b> Time-series complexity measures, regional datasets.</p>
+<p><b>Expected deliverables.</b> Predictability atlas and methodological comparison.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-9" class="ref" title="Assessing the history-based predictability of regional monthly precipitation data using statistical and fuzzy methods">[9]</a></p>
+</article><article class="card" data-theme="F" data-level="M">
+<div class="cardhead"><span class="num">ACP-62</span><span class="tag tF">Climate, precipitation &amp; air-quality data science</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Drought and flood indicators for Romania from global datasets</h3>
+<p><b>Aim.</b> Compute SPI/SPEI indices for Romania from reduced global datasets and validate against national records.</p>
+<p><b>Methods &amp; tools.</b> xarray, climate indices, station data.</p>
+<p><b>Expected deliverables.</b> Indicator maps and validation report.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-4" class="ref" title="A ten time smaller version of CPC global daily precipitation dataset for parallel distributed processing in Matlab and R">[4]</a> <a href="#pub-9" class="ref" title="Assessing the history-based predictability of regional monthly precipitation data using statistical and fuzzy methods">[9]</a></p>
+</article><article class="card" data-theme="F" data-level="M">
+<div class="cardhead"><span class="num">ACP-63</span><span class="tag tF">Climate, precipitation &amp; air-quality data science</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Statistical downscaling of precipitation with deep learning</h3>
+<p><b>Aim.</b> Downscale coarse global precipitation to regional resolution with super-resolution networks.</p>
+<p><b>Methods &amp; tools.</b> SRCNN/GAN downscaling, bias correction.</p>
+<p><b>Expected deliverables.</b> Downscaling model and skill assessment.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-4" class="ref" title="A ten time smaller version of CPC global daily precipitation dataset for parallel distributed processing in Matlab and R">[4]</a></p>
+</article><article class="card" data-theme="F" data-level="L+">
+<div class="cardhead"><span class="num">ACP-64</span><span class="tag tF">Climate, precipitation &amp; air-quality data science</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Anomaly detection in environmental sensor time series</h3>
+<p><b>Aim.</b> Detect faulty readings and unusual events in pollution and meteorological series.</p>
+<p><b>Methods &amp; tools.</b> Isolation forest, autoencoders, seasonal decomposition.</p>
+<p><b>Expected deliverables.</b> Detection pipeline and labelled evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-7" class="ref" title="On the aerosol optical depth series in the Arabian Gulf region">[7]</a> <a href="#pub-8" class="ref" title="Assessing Atmospheric Pollution and Its Impact on the Human Health">[8]</a></p>
+</article><article class="card" data-theme="G" data-level="M">
+<div class="cardhead"><span class="num">ACP-65</span><span class="tag tG">Image &amp; signal processing, compression, fast transforms</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Learned lossless image compression vs. DCT-based schemes</h3>
+<p><b>Aim.</b> Compare the author&#x27;s lossless DCT-based compression with learned lossless codecs.</p>
+<p><b>Methods &amp; tools.</b> PyTorch, entropy coding, Kodak/CLIC datasets, bits-per-pixel.</p>
+<p><b>Expected deliverables.</b> Benchmark and hybrid codec prototype.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-36" class="ref" title="Lossless DCT-Based Compression for Single-Component Continuous-Tone Still Images">[36]</a></p>
+</article><article class="card" data-theme="G" data-level="M">
+<div class="cardhead"><span class="num">ACP-66</span><span class="tag tG">Image &amp; signal processing, compression, fast transforms</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Perceptual chroma downsampling with fast k-means</h3>
+<p><b>Aim.</b> Optimise luminance-chrominance downsampling with perceptual metrics and learned quantisers.</p>
+<p><b>Methods &amp; tools.</b> Fast k-means, SSIM/LPIPS, colour spaces.</p>
+<p><b>Expected deliverables.</b> Downsampling method and perceptual evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-37" class="ref" title="Optimal Luminance-Chrominance Downsampling through Fast K-Means Quantization">[37]</a> <a href="#pub-35" class="ref" title="Fast K-Means Image Quantization Algorithm and Its Application to Iris Segmentation">[35]</a></p>
+</article><article class="card" data-theme="G" data-level="M">
+<div class="cardhead"><span class="num">ACP-67</span><span class="tag tG">Image &amp; signal processing, compression, fast transforms</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Gabor analytic phase encoders for general texture classification</h3>
+<p><b>Aim.</b> Test whether Gabor analytic binary encoders generalise to texture, fabric or material classification.</p>
+<p><b>Methods &amp; tools.</b> Gabor filter banks, binary codes, DTD/KTH-TIPS datasets.</p>
+<p><b>Expected deliverables.</b> Texture classifier and comparison with CNN features.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-31" class="ref" title="Gabor Analytic Iris Texture Binary Encoder">[31]</a> <a href="#pub-24" class="ref" title="Automatic Detection of Common Long-Term Monetary Policies on Global Exchange Market Using Gabor Analytic Phase Binary Encoder">[24]</a></p>
+</article><article class="card" data-theme="G" data-level="M">
+<div class="cardhead"><span class="num">ACP-68</span><span class="tag tG">Image &amp; signal processing, compression, fast transforms</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Speech and speaker recognition with binary phase encoding</h3>
+<p><b>Aim.</b> Adapt phase-based binary encoders from iris to speech spectrograms for speaker verification.</p>
+<p><b>Methods &amp; tools.</b> STFT, Gabor analysis, VoxCeleb subset, EER.</p>
+<p><b>Expected deliverables.</b> Speaker verifier and analysis of phase features.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-31" class="ref" title="Gabor Analytic Iris Texture Binary Encoder">[31]</a> <a href="#pub-22" class="ref" title="Comparing Haar-Hilbert and Log-Gabor based iris encoders on Bath Iris Image Database">[22]</a></p>
+</article><article class="card" data-theme="G" data-level="L+">
+<div class="cardhead"><span class="num">ACP-69</span><span class="tag tG">Image &amp; signal processing, compression, fast transforms</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Fast k-means image quantisation on GPU</h3>
+<p><b>Aim.</b> Implement and optimise fast k-means quantisation in CUDA and compare with CPU versions.</p>
+<p><b>Methods &amp; tools.</b> CUDA/CuPy, profiling, colour-quantisation quality metrics.</p>
+<p><b>Expected deliverables.</b> GPU library and performance report.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-35" class="ref" title="Fast K-Means Image Quantization Algorithm and Its Application to Iris Segmentation">[35]</a> <a href="#pub-37" class="ref" title="Optimal Luminance-Chrominance Downsampling through Fast K-Means Quantization">[37]</a></p>
+</article><article class="card" data-theme="G" data-level="M">
+<div class="cardhead"><span class="num">ACP-70</span><span class="tag tG">Image &amp; signal processing, compression, fast transforms</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Airport runway detection in satellite imagery with deep learning</h3>
+<p><b>Aim.</b> Upgrade the MPI &amp; CImg runway detector with modern object detection on satellite images.</p>
+<p><b>Methods &amp; tools.</b> YOLO/DETR, Sentinel-2 or xView data, mAP evaluation.</p>
+<p><b>Expected deliverables.</b> Detection model and comparison with classical pipeline.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-12" class="ref" title="A Parallel Approach on Airport Runways Detection Using MPI &amp; CImg">[12]</a></p>
+</article><article class="card" data-theme="G" data-level="L+">
+<div class="cardhead"><span class="num">ACP-71</span><span class="tag tG">Image &amp; signal processing, compression, fast transforms</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Robotic vision for embedded platforms</h3>
+<p><b>Aim.</b> Build an embedded vision module (object/line detection) for a small mobile robot.</p>
+<p><b>Methods &amp; tools.</b> ROS 2, OpenCV, Jetson Nano / Raspberry Pi.</p>
+<p><b>Expected deliverables.</b> Working robot demo and performance evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-12" class="ref" title="A Parallel Approach on Airport Runways Detection Using MPI &amp; CImg">[12]</a> <a href="#pub-35" class="ref" title="Fast K-Means Image Quantization Algorithm and Its Application to Iris Segmentation">[35]</a></p>
+</article><article class="card" data-theme="G" data-level="M">
+<div class="cardhead"><span class="num">ACP-72</span><span class="tag tG">Image &amp; signal processing, compression, fast transforms</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Character recognition for historical Romanian documents</h3>
+<p><b>Aim.</b> Develop OCR/HTR for Cyrillic-transition Romanian script in historical documents.</p>
+<p><b>Methods &amp; tools.</b> Transformer HTR (TrOCR), data augmentation, CER/WER.</p>
+<p><b>Expected deliverables.</b> HTR model and annotated sample corpus.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-17" class="ref" title="Examples of Artificial Perceptions in Optical Character Recognition and Iris Recognition">[17]</a></p>
+</article><article class="card" data-theme="G" data-level="L+">
+<div class="cardhead"><span class="num">ACP-73</span><span class="tag tG">Image &amp; signal processing, compression, fast transforms</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Signal processing methodologies course lab: interactive notebook suite</h3>
+<p><b>Aim.</b> Turn the book&#x27;s signal-processing methodology into interactive Jupyter labs (filtering, Gabor, FFT, quantisation).</p>
+<p><b>Methods &amp; tools.</b> Jupyter, ipywidgets, automated grading.</p>
+<p><b>Expected deliverables.</b> Lab suite usable in courses, with evaluation by students.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-B1" class="ref" title="Signal Processing Methodologies: A new approach to iris recognition (book)">[B1]</a> <a href="#pub-38" class="ref" title="Bit Reversal through Direct Fourier Permutation Method and Vectorial Digit Reversal Generalization">[38]</a></p>
+</article><article class="card" data-theme="H" data-level="M">
+<div class="cardhead"><span class="num">ACP-74</span><span class="tag tH">Parallel, distributed &amp; high-performance computing</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Bit-reversal permutations on GPUs and many-core CPUs</h3>
+<p><b>Aim.</b> Implement the Direct Fourier Permutation method and vectorial digit reversal on modern hardware and compare with cuFFT/FFTW.</p>
+<p><b>Methods &amp; tools.</b> CUDA, AVX-512, cache analysis, roofline model.</p>
+<p><b>Expected deliverables.</b> Optimised kernels and performance study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-38" class="ref" title="Bit Reversal through Direct Fourier Permutation Method and Vectorial Digit Reversal Generalization">[38]</a> <a href="#pub-39" class="ref" title="Efficient (Implicit) Bit Reversal Ordering through Direct Fourier Permutation Method">[39]</a></p>
+</article><article class="card" data-theme="H" data-level="L+">
+<div class="cardhead"><span class="num">ACP-75</span><span class="tag tH">Parallel, distributed &amp; high-performance computing</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Parallel distributed climate data processing in Python, R and Matlab</h3>
+<p><b>Aim.</b> Benchmark parallel frameworks (Dask, Spark, R parallel, Matlab PCT) on the reduced CPC dataset.</p>
+<p><b>Methods &amp; tools.</b> Cluster/cloud runs, scaling curves.</p>
+<p><b>Expected deliverables.</b> Benchmark report and reusable scripts.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-4" class="ref" title="A ten time smaller version of CPC global daily precipitation dataset for parallel distributed processing in Matlab and R">[4]</a> <a href="#pub-12" class="ref" title="A Parallel Approach on Airport Runways Detection Using MPI &amp; CImg">[12]</a></p>
+</article><article class="card" data-theme="H" data-level="M">
+<div class="cardhead"><span class="num">ACP-76</span><span class="tag tH">Parallel, distributed &amp; high-performance computing</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>MPI-based large-scale biometric identification</h3>
+<p><b>Aim.</b> Scale 1:N iris identification to millions of templates with MPI and GPU acceleration.</p>
+<p><b>Methods &amp; tools.</b> MPI, GPU Hamming distance, indexing.</p>
+<p><b>Expected deliverables.</b> Distributed identification engine and scalability study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-21" class="ref" title="Exploratory Simulation of an Intelligent Iris Verifier Distributed System">[21]</a> <a href="#pub-12" class="ref" title="A Parallel Approach on Airport Runways Detection Using MPI &amp; CImg">[12]</a></p>
+</article><article class="card" data-theme="H" data-level="L+">
+<div class="cardhead"><span class="num">ACP-77</span><span class="tag tH">Parallel, distributed &amp; high-performance computing</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Serverless pipelines for satellite image analytics</h3>
+<p><b>Aim.</b> Process satellite images in a serverless architecture and compare costs with a cluster approach.</p>
+<p><b>Methods &amp; tools.</b> AWS Lambda / Cloud Run, object storage.</p>
+<p><b>Expected deliverables.</b> Pipeline and cost/performance analysis.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-12" class="ref" title="A Parallel Approach on Airport Runways Detection Using MPI &amp; CImg">[12]</a></p>
+</article><article class="card" data-theme="H" data-level="M">
+<div class="cardhead"><span class="num">ACP-78</span><span class="tag tH">Parallel, distributed &amp; high-performance computing</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Energy-efficient AI inference on edge accelerators</h3>
+<p><b>Aim.</b> Measure accuracy, latency and energy trade-offs for compressed models on edge accelerators.</p>
+<p><b>Methods &amp; tools.</b> TensorRT, Edge TPU, power measurement.</p>
+<p><b>Expected deliverables.</b> Benchmark and deployment guidelines.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-1" class="ref" title="Neuro-Bayesian-Symbolic Residual Attention Shallow Network: Explainable Deep Learning for Cybersecurity Risk Assessment">[1]</a> <a href="#pub-12" class="ref" title="A Parallel Approach on Airport Runways Detection Using MPI &amp; CImg">[12]</a></p>
+</article><article class="card" data-theme="I" data-level="M">
+<div class="cardhead"><span class="num">ACP-79</span><span class="tag tI">Medical &amp; financial signal analytics</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Automated blood-cell classification with deep learning</h3>
+<p><b>Aim.</b> Revisit ISODATA/RLE-based blood corpuscle classification with modern CNNs for diagnostic support.</p>
+<p><b>Methods &amp; tools.</b> PyTorch, BCCD / public blood-smear datasets, explainability.</p>
+<p><b>Expected deliverables.</b> Classifier, comparison with classical pipeline, explanation maps.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-28" class="ref" title="Blood corpuscles classification schemes for automated diagnosis of hepatitis using ISODATA algorithm and Run Length Encoding">[28]</a> <a href="#pub-34" class="ref" title="Blood corpuscles classification schemes for automated diagnosis of hepatitis">[34]</a></p>
+</article><article class="card" data-theme="I" data-level="M">
+<div class="cardhead"><span class="num">ACP-80</span><span class="tag tI">Medical &amp; financial signal analytics</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Clustering-based anomaly detection in medical images</h3>
+<p><b>Aim.</b> Use fuzzy/ISODATA clustering as an unsupervised baseline for anomaly detection in microscopy images.</p>
+<p><b>Methods &amp; tools.</b> Clustering, autoencoders, AUROC.</p>
+<p><b>Expected deliverables.</b> Unsupervised detection study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-28" class="ref" title="Blood corpuscles classification schemes for automated diagnosis of hepatitis using ISODATA algorithm and Run Length Encoding">[28]</a> <a href="#pub-35" class="ref" title="Fast K-Means Image Quantization Algorithm and Its Application to Iris Segmentation">[35]</a></p>
+</article><article class="card" data-theme="I" data-level="M">
+<div class="cardhead"><span class="num">ACP-81</span><span class="tag tI">Medical &amp; financial signal analytics</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Detecting monetary-policy regimes with Gabor analytic phase encoding</h3>
+<p><b>Aim.</b> Apply phase-based binary encoders to exchange-rate time series to detect policy regimes and co-movements.</p>
+<p><b>Methods &amp; tools.</b> Hilbert/Gabor transforms, regime-switching models, FX data.</p>
+<p><b>Expected deliverables.</b> Regime-detection tool and economic case study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-24" class="ref" title="Automatic Detection of Common Long-Term Monetary Policies on Global Exchange Market Using Gabor Analytic Phase Binary Encoder">[24]</a></p>
+</article><article class="card" data-theme="I" data-level="L+">
+<div class="cardhead"><span class="num">ACP-82</span><span class="tag tI">Medical &amp; financial signal analytics</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Financial time-series similarity search with binary signatures</h3>
+<p><b>Aim.</b> Index financial series by binary phase signatures for fast similarity search.</p>
+<p><b>Methods &amp; tools.</b> Locality-sensitive hashing, Hamming search.</p>
+<p><b>Expected deliverables.</b> Search engine prototype and evaluation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-24" class="ref" title="Automatic Detection of Common Long-Term Monetary Policies on Global Exchange Market Using Gabor Analytic Phase Binary Encoder">[24]</a> <a href="#pub-31" class="ref" title="Gabor Analytic Iris Texture Binary Encoder">[31]</a></p>
+</article><article class="card" data-theme="I" data-level="M">
+<div class="cardhead"><span class="num">ACP-83</span><span class="tag tI">Medical &amp; financial signal analytics</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Explainable credit-risk scoring with neuro-symbolic models</h3>
+<p><b>Aim.</b> Apply the neuro-Bayesian-symbolic architecture to credit-risk scoring with regulatory explainability.</p>
+<p><b>Methods &amp; tools.</b> Tabular deep learning, SHAP vs rule explanations, fairness metrics.</p>
+<p><b>Expected deliverables.</b> Scoring model and explainability/fairness report.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-1" class="ref" title="Neuro-Bayesian-Symbolic Residual Attention Shallow Network: Explainable Deep Learning for Cybersecurity Risk Assessment">[1]</a></p>
+</article><article class="card" data-theme="J" data-level="M">
+<div class="cardhead"><span class="num">ACP-84</span><span class="tag tJ">Numerical &amp; stochastic modelling (Krylov, SDEs, reduced-order models)</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Krylov-subspace model order reduction for large dynamical systems</h3>
+<p><b>Aim.</b> Implement Arnoldi and Lanczos moment-matching reduction and benchmark on standard MOR test cases.</p>
+<p><b>Methods &amp; tools.</b> Python/SciPy, Julia; SLICOT benchmarks.</p>
+<p><b>Expected deliverables.</b> Reduction library and accuracy/speed study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-41" class="ref" title="Implicit moments matching through Krylov subspaces projections methods. Lanczos methods">[41]</a> <a href="#pub-42" class="ref" title="Implicit moments matching through Krylov subspaces projections methods. Arnoldi methods">[42]</a></p>
+</article><article class="card" data-theme="J" data-level="M">
+<div class="cardhead"><span class="num">ACP-85</span><span class="tag tJ">Numerical &amp; stochastic modelling (Krylov, SDEs, reduced-order models)</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Reduced-order models for computational mechanics with machine learning</h3>
+<p><b>Aim.</b> Combine Krylov/POD reduced-order models with neural networks for fast structural simulations.</p>
+<p><b>Methods &amp; tools.</b> FEniCS, POD, neural operators.</p>
+<p><b>Expected deliverables.</b> Surrogate model and validation against full simulation.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-41" class="ref" title="Implicit moments matching through Krylov subspaces projections methods. Lanczos methods">[41]</a> <a href="#pub-42" class="ref" title="Implicit moments matching through Krylov subspaces projections methods. Arnoldi methods">[42]</a></p>
+</article><article class="card" data-theme="J" data-level="M">
+<div class="cardhead"><span class="num">ACP-86</span><span class="tag tJ">Numerical &amp; stochastic modelling (Krylov, SDEs, reduced-order models)</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Stochastic Hamiltonians and optimal control: numerical schemes</h3>
+<p><b>Aim.</b> Develop numerical solvers for SDE-related Hamiltonian problems with non-smooth final values.</p>
+<p><b>Methods &amp; tools.</b> Euler-Maruyama, Monte Carlo, BSDE solvers.</p>
+<p><b>Expected deliverables.</b> Solver implementation and convergence study.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-40" class="ref" title="Stochastic Hamiltonians Associated with Stochastic Differential Equations and Non-Smooth Final Value">[40]</a></p>
+</article><article class="card" data-theme="J" data-level="M">
+<div class="cardhead"><span class="num">ACP-87</span><span class="tag tJ">Numerical &amp; stochastic modelling (Krylov, SDEs, reduced-order models)</span><span class="lvl lM">Master's dissertation (Cycle II)</span></div>
+<h3>Neural SDEs for environmental time series</h3>
+<p><b>Aim.</b> Model precipitation or pollution dynamics with neural stochastic differential equations.</p>
+<p><b>Methods &amp; tools.</b> torchsde, likelihood training, probabilistic forecasting.</p>
+<p><b>Expected deliverables.</b> Neural SDE model and comparison with classical models.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-40" class="ref" title="Stochastic Hamiltonians Associated with Stochastic Differential Equations and Non-Smooth Final Value">[40]</a> <a href="#pub-9" class="ref" title="Assessing the history-based predictability of regional monthly precipitation data using statistical and fuzzy methods">[9]</a></p>
+</article><article class="card" data-theme="J" data-level="L+">
+<div class="cardhead"><span class="num">ACP-88</span><span class="tag tJ">Numerical &amp; stochastic modelling (Krylov, SDEs, reduced-order models)</span><span class="lvl lL">Advanced diploma project (Cycle I, final year)</span></div>
+<h3>Fast transforms in numerical linear algebra: teaching and benchmarking toolkit</h3>
+<p><b>Aim.</b> Build an educational and benchmarking toolkit covering FFT, bit reversal and Krylov methods.</p>
+<p><b>Methods &amp; tools.</b> Python/Julia, visualisations, benchmarks.</p>
+<p><b>Expected deliverables.</b> Toolkit with lab exercises and performance results.</p>
+<p class="refs"><b>Builds on:</b> <a href="#pub-38" class="ref" title="Bit Reversal through Direct Fourier Permutation Method and Vectorial Digit Reversal Generalization">[38]</a> <a href="#pub-41" class="ref" title="Implicit moments matching through Krylov subspaces projections methods. Lanczos methods">[41]</a></p>
+</article>
+</div>
+</main>
+<footer>Proposal numbers (ACP-xx) are stable identifiers you can use in the topic list your faculty publishes. Bracketed references [n] link to the publication inventory. Sources for the regulatory framework: Ministry of Education Order 3691/2024 (edu.ro) and the faculty finalisation regulations that implement it.</footer>
+<script>
+let th="all",lv="all";const q=document.getElementById("q"),cards=[...document.querySelectorAll(".card")];
+function apply(){const s=q.value.toLowerCase();let n=0;cards.forEach(c=>{const ok=(th=="all"||c.dataset.theme==th)&&(lv=="all"||c.dataset.level==lv)&&(!s||c.textContent.toLowerCase().includes(s));c.style.display=ok?"":"none";if(ok)n++});document.getElementById("count").textContent=n+" shown"}
+document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{th=b.dataset.f;document.querySelectorAll("[data-f]").forEach(x=>x.classList.toggle("on",x==b));apply()});
+document.querySelectorAll("[data-l]").forEach(b=>b.onclick=()=>{lv=b.dataset.l;document.querySelectorAll("[data-l]").forEach(x=>x.classList.toggle("on",x==b));apply()});
+q.oninput=apply;apply();
+</script>
+</body></html>
